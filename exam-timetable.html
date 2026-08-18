@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Exam Time Table Generator | St. Joseph's School</title>
+
+<link rel="stylesheet"
+href="exam-timetable.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!--==================================================
+                    LEFT EDITOR
+==================================================-->
+
+<aside class="editor-panel">
+
+
+    <!-- HEADER -->
+
+    <div class="panel-header">
+
+        <div class="panel-icon">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+        </div>
+
+        <div>
+
+            <h2>Exam Time Table</h2>
+
+            <p>St. Joseph's School ERP</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!--==================================================
+                    EXAM DETAILS
+    ==================================================-->
+
+    <div class="editor-card">
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <h3>Exam Details</h3>
+
+        </div>
+
+
+        <!-- Examination Name -->
+
+        <div class="form-group">
+
+            <label>
+                Examination Name
+            </label>
+
+            <input
+            type="text"
+            id="examName"
+            placeholder="e.g. Half Yearly Examination"
+            value="Annual Examination">
+
+        </div>
+
+
+        <!-- Academic Session -->
+
+        <div class="form-group">
+
+            <label>
+                Academic Session
+            </label>
+
+            <input
+            type="text"
+            id="academicSession"
+            value="2026-2027"
+            placeholder="2026-2027">
+
+        </div>
+
+
+        <!-- Class -->
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label>
+                    Class
+                </label>
+
+                <select id="studentClass">
+
+                    <option value="All Classes">
+                        All Classes
+                    </option>
+
+                    <option>Nursery</option>
+                    <option>LKG</option>
+                    <option>UKG</option>
+
+                    <option>Class I</option>
+                    <option>Class II</option>
+                    <option>Class III</option>
+                    <option>Class IV</option>
+                    <option>Class V</option>
+
+                    <option>Class VI</option>
+                    <option>Class VII</option>
+                    <option>Class VIII</option>
+
+                    <option>Class IX</option>
+                    <option>Class X</option>
+
+                    <option>Class XI</option>
+                    <option>Class XII</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Section -->
+
+            <div class="form-group">
+
+                <label>
+                    Section
+                </label>
+
+                <input
+                type="text"
+                id="section"
+                value="All"
+                placeholder="A / B / All">
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Exam Start -->
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label>
+                    Exam Start Date
+                </label>
+
+                <input
+                type="date"
+                id="startDate">
+
+            </div>
+
+
+            <!-- Exam End -->
+
+            <div class="form-group">
+
+                <label>
+                    Exam End Date
+                </label>
+
+                <input
+                type="date"
+                id="endDate">
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Exam Timing -->
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label>
+                    Start Time
+                </label>
+
+                <input
+                type="time"
+                id="startTime"
+                value="08:00">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    End Time
+                </label>
+
+                <input
+                type="time"
+                id="endTime"
+                value="11:00">
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!--==================================================
+                    SUBJECT SCHEDULE
+==================================================-->
+
+    <div class="editor-card">
+
+
+        <div class="card-title schedule-title">
+
+            <div>
+
+                <i class="fa-solid fa-list"></i>
+
+                <h3>
+                    Subject Schedule
+                </h3>
+
+            </div>
+
+
+            <button
+            type="button"
+            id="addSubjectBtn"
+            class="add-subject-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Subject
+
+            </button>
+
+        </div>
+
+
+
+        <!-- SUBJECT ROWS -->
+
+        <div
+        id="subjectRows"
+        class="subject-rows">
+
+
+            <!--========================================
+                    SUBJECT ROW 1
+            =========================================-->
+
+            <div
+            class="subject-row"
+            data-row="1">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Date
+                    </label>
+
+                    <input
+                    type="date"
+                    class="subject-date">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Subject
+                    </label>
+
+                    <input
+                    type="text"
+                    class="subject-name"
+                    placeholder="Physics">
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Start
+                        </label>
+
+                        <input
+                        type="time"
+                        class="subject-start"
+                        value="08:00">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            End
+                        </label>
+
+                        <input
+                        type="time"
+                        class="subject-end"
+                        value="11:00">
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                type="button"
+                class="remove-subject"
+                title="Remove Subject">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!--==================================================
+                    INSTRUCTIONS
+==================================================-->
+
+    <div class="editor-card">
+
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <h3>
+                Important Instructions
+            </h3>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <textarea
+            id="instructions"
+            rows="6"
+            placeholder="Enter examination instructions...">Students must report to school 15 minutes before the examination.
+Students must bring all necessary stationery items.
+Mobile phones and electronic devices are not allowed in the examination hall.</textarea>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!--==================================================
+                    AUTHORITY
+==================================================-->
+
+    <div class="editor-card">
+
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-signature"></i>
+
+            <h3>
+                Authority Details
+            </h3>
+
+        </div>
+
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label>
+                    Exam In-Charge
+                </label>
+
+                <input
+                type="text"
+                id="examIncharge"
+                placeholder="Name / Designation"
+                value="Examination In-Charge">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Principal
+                </label>
+
+                <input
+                type="text"
+                id="principalName"
+                placeholder="Principal Name"
+                value="Principal">
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!--==================================================
+                    ACTION BUTTONS
+==================================================-->
+
+    <div class="button-group">
+
+
+        <button
+        type="button"
+        class="btn btn-preview"
+        id="previewBtn">
+
+            <i class="fa-solid fa-eye"></i>
+
+            Preview
+
+        </button>
+
+
+        <button
+        type="button"
+        class="btn btn-print"
+        id="printBtn">
+
+            <i class="fa-solid fa-print"></i>
+
+            Print
+
+        </button>
+
+
+        <button
+        type="button"
+        class="btn btn-pdf"
+        id="pdfBtn">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+            PDF
+
+        </button>
+
+
+        <button
+        type="button"
+        class="btn btn-whatsapp"
+        id="whatsappBtn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WhatsApp
+
+        </button>
+
+
+        <button
+        type="button"
+        class="btn btn-reset"
+        id="resetBtn">
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            Reset
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- BACK -->
+
+    <a
+    href="certificate-generator.html"
+    class="back-dashboard">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back to Documents
+
+    </a>
+
+
+</aside>
+
+
+
+<!--==================================================
+                    RIGHT PREVIEW
+==================================================-->
+
+<main class="preview-panel">
+
+
+    <div
+    class="a4-page"
+    id="examTimetablePreview">
+
+
+        <!--==================================================
+                    DECORATIVE BORDERS
+        ==================================================-->
+
+        <div class="outer-border"></div>
+
+        <div class="inner-border"></div>
+
+
+
+        <!--==================================================
+                    WATERMARK
+        ==================================================-->
+
+        <div class="watermark">
+
+            <img
+            src="images/school.png"
+            alt="School Watermark">
+
+        </div>
+
+
+
+        <!--==================================================
+                    SCHOOL HEADER
+        ==================================================-->
+
+        <header class="school-header">
+
+
+            <img
+            src="images/school.png"
+            class="school-logo"
+            alt="St. Joseph's School Logo">
+
+
+            <div class="school-info">
+
+                <h1>
+                    ST. JOSEPH'S SCHOOL
+                </h1>
+
+                <h3>
+                    Basiraha, Gambhirpur,
+                    Azamgarh (U.P.)
+                </h3>
+
+                <p>
+                    CBSE Affiliated Senior Secondary School
+                </p>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!--==================================================
+                    EXAMINATION TITLE
+        ==================================================-->
+
+        <div class="exam-title">
+
+
+            <span class="title-line"></span>
+
+
+            <div>
+
+                <h2 id="previewExamName">
+                    ANNUAL EXAMINATION
+                </h2>
+
+                <h3>
+                    EXAMINATION TIME TABLE
+                </h3>
+
+                <p>
+                    परीक्षा समय-सारणी
+                </p>
+
+            </div>
+
+
+            <span class="title-line"></span>
+
+
+        </div>
+
+
+
+        <!--==================================================
+                    EXAM META
+        ==================================================-->
+
+        <div class="exam-meta">
+
+
+            <div>
+
+                <strong>
+                    Academic Session
+                </strong>
+
+                <span id="previewSession">
+                    2026-2027
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Class
+                </strong>
+
+                <span id="previewClass">
+                    All Classes
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Section
+                </strong>
+
+                <span id="previewSection">
+                    All
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!--==================================================
+                    EXAM DATE RANGE
+        ==================================================-->
+
+        <div class="exam-period">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            <span>
+
+                Examination Period:
+
+            </span>
+
+            <strong id="previewExamPeriod">
+
+                __________
+
+            </strong>
+
+        </div>
+
+
+
+        <!--==================================================
+                    TIMETABLE
+        ==================================================-->
+
+        <div class="table-title">
+
+            EXAMINATION SCHEDULE
+
+            <span>
+                परीक्षा कार्यक्रम
+            </span>
+
+        </div>
+
+
+        <table class="timetable">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        S.No.
+                    </th>
+
+                    <th>
+                        Date<br>
+                        <small>तिथि</small>
+                    </th>
+
+                    <th>
+                        Day<br>
+                        <small>दिन</small>
+                    </th>
+
+                    <th>
+                        Subject<br>
+                        <small>विषय</small>
+                    </th>
+
+                    <th>
+                        Examination Time<br>
+                        <small>परीक्षा समय</small>
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="previewTableBody">
+
+
+                <!-- DEFAULT ROW -->
+
+                <tr>
+
+                    <td>
+                        1
+                    </td>
+
+                    <td>
+                        —
+                    </td>
+
+                    <td>
+                        —
+                    </td>
+
+                    <td class="subject-preview">
+                        Subject
+                    </td>
+
+                    <td>
+                        08:00 AM – 11:00 AM
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+
+        </table>
+
+
+
+        <!--==================================================
+                    IMPORTANT INSTRUCTIONS
+        ==================================================-->
+
+        <section class="preview-instructions">
+
+
+            <div class="instruction-heading">
+
+                <strong>
+                    Important Instructions
+                </strong>
+
+                <span>
+                    महत्वपूर्ण निर्देश
+                </span>
+
+            </div>
+
+
+            <div id="previewInstructions">
+
+                <p>
+                    Students must report to school
+                    15 minutes before the examination.
+                </p>
+
+                <p>
+                    Students must bring all necessary
+                    stationery items.
+                </p>
+
+                <p>
+                    Mobile phones and electronic devices
+                    are not allowed in the examination hall.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!--==================================================
+                    SIGNATURES
+        ==================================================-->
+
+        <div class="signature-section">
+
+
+            <div class="signature-box">
+
+                <div class="signature-line"></div>
+
+                <strong id="previewExamIncharge">
+                    Examination In-Charge
+                </strong>
+
+                <small>
+                    परीक्षा प्रभारी
+                </small>
+
+            </div>
+
+
+            <div class="signature-box">
+
+                <div class="signature-line"></div>
+
+                <strong id="previewPrincipal">
+                    Principal
+                </strong>
+
+                <small>
+                    प्रधानाचार्य
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!--==================================================
+                    FOOTER
+        ==================================================-->
+
+        <div class="page-footer">
+
+            St. Joseph's School • Official Examination Document
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+</div>
+
+
+
+<!--==================================================
+                    LIBRARIES
+==================================================-->
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+</script>
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+</script>
+
+
+<script src="exam-timetable.js"></script>
+
+
+</body>
+
+</html>

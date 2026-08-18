@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SJS ERP | Certificate Generator</title>
+
+<link rel="stylesheet" href="certificate-generator.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--=========================
+        SIDEBAR
+==========================-->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<img src="images/school.png" alt="SJS Logo">
+
+<h2>SJS ERP</h2>
+
+<p>Office Management System</p>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="admission-form.html">
+<i class="fa-solid fa-user-plus"></i>
+<span>Admissions</span>
+</a>
+</li>
+
+
+</li>
+
+
+
+<li>
+<a href="notice-generator.html">
+<i class="fa-solid fa-bullhorn"></i>
+<span>Notice Generator</span>
+</a>
+</li>
+
+
+
+
+<li>
+<a href="certificate-generator.html" class="active">
+
+<i class="fa-solid fa-certificate"></i>
+
+<span>Certificate Generator</span>
+
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-chart-column"></i>
+<span>School Settings</span>
+</a>
+</li>
+
+<li>
+<a href="login.html">
+<i class="fa-solid fa-gear"></i>
+<span>Logout</span>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</aside>
+
+<!--=========================
+        MAIN
+==========================-->
+
+<div class="main">
+
+<!--=========================
+        HEADER
+==========================-->
+
+<header class="page-header">
+
+<div class="header-left">
+
+<h1>Certificate Generator</h1>
+
+<p>
+
+Create school certificates instantly with one click.
+
+</p>
+
+</div>
+
+<div class="header-right">
+
+<div class="admin-profile">
+
+<div class="profile-icon">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div>
+
+<h4>Office Staff</h4>
+
+<span>St. Joseph's School</span>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!--=========================
+      SEARCH BAR
+==========================-->
+
+<section class="search-section">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+id="searchCertificate"
+placeholder="Search Certificate...">
+
+</div>
+
+</section>
+
+<!--=========================
+ STUDENT CERTIFICATES
+==========================-->
+
+<section class="certificate-section">
+
+<div class="section-title">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<h2>Student Certificates</h2>
+
+</div>
+
+<div class="certificate-grid"><!--=====================================
+      CHARACTER CERTIFICATE
+======================================-->
+
+<div class="certificate-card">
+
+    <div class="card-icon">
+
+        <i class="fa-solid fa-id-card"></i>
+
+    </div>
+
+    <h3>Character Certificate</h3>
+
+    <p>
+
+        Generate an official Character Certificate for
+        students with Principal details and school
+        information.
+
+    </p>
+
+    <button onclick="window.location.href='character-certificate.html'">
+
+        <i class="fa-solid fa-file-circle-plus"></i>
+
+        Generate Certificate
+
+    </button>
+
+</div>
+
+<!--=====================================
+      TRANSFER CERTIFICATE
+======================================-->
+
+<div class="certificate-card">
+
+    <div class="card-icon">
+
+        <i class="fa-solid fa-file-export"></i>
+
+    </div>
+
+    <h3>Transfer Certificate (TC)</h3>
+
+    <p>
+
+        Create a Transfer Certificate with complete
+        student information ready for printing.
+
+    </p>
+
+    <button onclick="window.location.href='transfer-certificate.html'">
+
+        <i class="fa-solid fa-file-circle-plus"></i>
+
+        Generate Certificate
+
+    </button>
+
+</div>
+
+</div>
+
+</section>
+
+<!--=====================================
+      ACADEMIC CERTIFICATES
+======================================-->
+
+<section class="certificate-section">
+
+<div class="section-title">
+
+    <i class="fa-solid fa-trophy"></i>
+
+    <h2>Academic Certificates</h2>
+
+</div>
+
+<div class="certificate-grid"><!--=====================================
+      ACADEMIC EXCELLENCE CERTIFICATE
+======================================-->
+
+<div class="certificate-card">
+
+    <div class="card-icon">
+
+        <i class="fa-solid fa-award"></i>
+
+    </div>
+
+    <h3>Academic Excellence Certificate</h3>
+
+    <p>
+
+        Generate Academic Excellence Certificates for
+        outstanding student performance in academics.
+
+    </p>
+
+    <button onclick="window.location.href='academic-excellence.html'">
+
+        <i class="fa-solid fa-file-circle-plus"></i>
+
+        Generate Certificate
+
+    </button>
+
+</div>
+
+<!--=====================================
+      MERIT CERTIFICATE
+======================================-->
+
+<div class="certificate-card">
+
+    <div class="card-icon">
+
+        <i class="fa-solid fa-medal"></i>
+
+    </div>
+
+    <h3>Merit Certificate</h3>
+
+    <p>
+
+        Create Merit Certificates for students who have
+        achieved excellent results and remarkable academic
+        performance.
+
+    </p>
+
+    <button onclick="window.location.href='merit-certificate.html'">
+
+        <i class="fa-solid fa-file-circle-plus"></i>
+
+        Generate Certificate
+
+    </button>
+
+</div>
+
+</div>
+
+</section>
+
+<!--=====================================
+      STAFF CERTIFICATES
+======================================-->
+
+<section class="certificate-section">
+
+<div class="section-title">
+
+    <i class="fa-solid fa-user-tie"></i>
+
+    <h2>Staff Certificates</h2>
+
+</div>
+
+<div class="certificate-grid"><!--=====================================
+      EXPERIENCE CERTIFICATE
+======================================-->
+
+<div class="certificate-card">
+
+    <div class="card-icon">
+
+        <i class="fa-solid fa-briefcase"></i>
+
+    </div>
+
+    <h3>Experience Certificate</h3>
+
+    <p>
+
+        Generate professional Experience Certificates
+        for teaching and non-teaching staff with official
+        school details.
+
+    </p>
+
+    <button onclick="window.location.href='experience-certificate.html'">
+
+        <i class="fa-solid fa-file-circle-plus"></i>
+
+        Generate Certificate
+
+    </button>
+
+</div>
+
+<!--=====================================
+      APPRECIATION CERTIFICATE
+======================================-->
+
+<div class="certificate-card">
+
+    <div class="card-icon">
+
+        <i class="fa-solid fa-handshake-angle"></i>
+
+    </div>
+
+    <h3>Appreciation Certificate</h3>
+
+    <p>
+
+        Create Appreciation Certificates for teachers,
+        staff members and special contributors of the
+        school.
+
+    </p>
+
+    <button onclick="window.location.href='appreciation-certificate.html'">
+
+        <i class="fa-solid fa-file-circle-plus"></i>
+
+        Generate Certificate
+
+    </button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!--=====================================
+        SJS DOCUMENTS
+======================================-->
+
+<section class="certificate-section">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-file-lines"></i>
+
+        <h2>SJS Documents</h2>
+
+    </div>
+
+
+    <div class="certificate-grid">
+
+
+        <!--=====================================
+            EXAM TIME TABLE GENERATOR
+        ======================================-->
+
+        <div class="certificate-card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+            </div>
+
+
+            <h3>Exam Time Table Generator</h3>
+
+
+            <p>
+
+                Create a professional examination
+                timetable with subjects, dates, timings
+                and school details ready for printing.
+
+            </p>
+
+
+            <button
+            onclick="window.location.href='exam-timetable.html'">
+
+                <i class="fa-solid fa-file-circle-plus"></i>
+
+                Generate Document
+
+            </button>
+
+        </div>
+
+
+
+        <!--=====================================
+            STUDENT WARNING LETTER
+        ======================================-->
+
+        <div class="certificate-card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+
+            <h3>Student Warning Letter</h3>
+
+
+            <p>
+
+                Create a formal student warning letter
+                for discipline-related matters with
+                official school details.
+
+            </p>
+
+
+            <button
+            onclick="window.location.href='student-warning-letter.html'">
+
+                <i class="fa-solid fa-file-circle-plus"></i>
+
+                Generate Document
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!--=====================================
+            FOOTER
+======================================-->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <img src="images/school.png" alt="School Logo">
+
+            <div>
+
+                <h3>St. Joseph's School ERP</h3>
+
+                <p>
+                    Basiraha, Gambhirpur, Azamgarh (U.P.)
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p><strong>Module:</strong> Certificate Generator</p>
+
+            <p><strong>Version:</strong> 1.0</p>
+
+            <p id="currentDate"></p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 St. Joseph's School. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+</div>
+
+<script src="certificate-generator.js"></script>
+
+</body>
+
+</html>

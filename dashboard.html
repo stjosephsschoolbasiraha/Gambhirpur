@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SJS Office Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+        Sidebar
+========================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <img src="images/school.png"
+             alt="School Logo">
+
+        <h2>SJS ERP</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+
+            <a href="#">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="admission-form.html">
+
+                <i class="fa-solid fa-file-circle-plus"></i>
+
+                Admission Forms
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="notice-generator.html">
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                Notice Generator
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="certificate-generator.html">
+
+                <i class="fa-solid fa-award"></i>
+
+                Certificate Generator
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="school-document-generator.html">
+
+                <i class="fa-solid fa-file-lines"></i>
+         SJS Document Generate
+               
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                School Settings
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="login.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- =========================
+        Main Content
+========================= -->
+
+<div class="main-content">
+
+<!-- =========================
+        Top Navbar
+========================= -->
+
+<div class="topbar">
+
+    <div class="welcome">
+
+        <h1>
+
+            Welcome,
+            <span id="adminName">
+
+                Office Staff
+
+            </span>
+
+        </h1>
+
+        <p>
+
+            St. Joseph's School Dashboard
+
+        </p>
+
+    </div>
+
+    <div class="top-right">
+
+        <div class="date-time">
+
+            <span id="currentDate">
+
+                Loading Date...
+
+            </span>
+
+            <br>
+
+            <span id="currentTime">
+
+                Loading Time...
+
+            </span>
+
+        </div>
+
+        <div class="profile">
+
+            <img src="images/school.png"
+                 alt="Profile">
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =========================
+        Quick Actions
+========================= -->
+
+<div class="quick-actions">
+
+    <h2>
+
+        Quick Actions
+
+    </h2>
+
+    <div class="action-grid">
+
+        <a href="admission-form.html" class="action-card">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <span>
+
+                New Admission
+
+            </span>
+
+        </a>
+
+        <a href="certificate-generator.html" class="action-card">
+
+            <i class="fa-solid fa-award"></i>
+
+            <span>
+
+                Generate Certificate
+
+            </span>
+
+        </a>
+
+        <a href="school-document-generator.html" class="action-card">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>
+
+                SJS Document Generator
+
+
+            </span>
+
+        </a>
+
+        <a href="notice-generator.html" class="action-card">
+
+            <i class="fa-solid fa-bullhorn"></i>
+
+            <span>
+
+                Create Notice
+
+            </span>
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- =========================
+        School Information
+========================= -->
+
+<div class="school-card">
+
+    <h2>
+
+        <i class="fa-solid fa-school"></i>
+
+        School Information
+
+    </h2>
+
+    <table>
+
+        <tr>
+
+            <td>School Name</td>
+
+            <td>St. Joseph's School</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Board</td>
+
+            <td>CBSE</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Office User</td>
+
+            <td id="officeUser">
+
+                Office Staff
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>Status</td>
+
+            <td>
+
+                <span class="online">
+
+                    ● Online
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div><!-- =========================
+        Recent Activity
+========================= -->
+
+<div class="recent-section">
+
+    <div class="recent-card">
+
+        <h2>
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            Recent Activity
+
+        </h2>
+
+        <ul id="recentActivity">
+
+            <li>
+                Office Staff logged in successfully.
+            </li>
+
+            <li>
+                No recent certificates generated.
+            </li>
+
+            <li>
+                No recent admission forms.
+            </li>
+
+            <li>
+                No recent notices created.
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="notification-card">
+
+        <h2>
+
+            <i class="fa-solid fa-bell"></i>
+
+            Notifications
+
+        </h2>
+
+        <div class="notification">
+
+            Welcome to SJS Office Dashboard.
+
+        </div>
+
+        <div class="notification">
+
+            Firebase Authentication Connected.
+
+        </div>
+
+        <div class="notification">
+
+            Firestore Database Connected.
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+        Footer
+========================= -->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 St. Joseph's School ERP |
+        All Rights Reserved
+
+    </p>
+
+</footer>
+
+</div>
+
+<!-- =========================
+        Dashboard JavaScript
+========================= -->
+
+<script type="module" src="dashboard.js"></script>
+
+</body>
+
+</html>

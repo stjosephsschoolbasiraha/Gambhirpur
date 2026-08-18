@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+SJS ERP | Office Staff Login
+</title>
+
+<!-- CSS -->
+
+<link rel="stylesheet"
+      href="login.css">
+
+<!-- Google Font -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--=========================
+        Background
+==========================-->
+
+<div class="background">
+
+<div class="overlay"></div>
+
+<div class="bg-circle circle1"></div>
+
+<div class="bg-circle circle2"></div>
+
+<div class="bg-circle circle3"></div>
+
+</div>
+
+<!--=========================
+      Login Container
+==========================-->
+
+<div class="login-container">
+
+<div class="login-card">
+
+<!--=========================
+        School Logo
+==========================-->
+
+<div class="logo-box">
+
+<img
+src="images/school.png"
+alt="School Logo"
+class="school-logo">
+
+</div>
+
+<!--=========================
+      School Heading
+==========================-->
+
+<h1 class="school-title">
+
+ST. JOSEPH'S SCHOOL
+
+</h1>
+
+<p class="school-subtitle">
+
+Office Staff Portal
+
+</p>
+
+<div class="line"></div>
+
+<!--=========================
+      Welcome Text
+==========================-->
+
+<h2 class="welcome-title">
+
+Welcome Back
+
+</h2>
+
+<p class="welcome-text">
+
+Sign in using your official
+office account.
+
+</p>
+
+<!--=========================
+        Login Form
+==========================-->
+
+<form id="loginForm"
+      autocomplete="off">
+
+<div class="input-group">
+
+<label>
+
+<i class="fa-solid fa-envelope"></i>
+
+Email Address
+
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter Email Address"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+<i class="fa-solid fa-lock"></i>
+
+Password
+
+</label>
+
+<div class="password-box">
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password"
+required>
+
+<button
+type="button"
+id="togglePassword">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+</div>
+
+</div>            <!--=========================
+                    Login Button
+            ==========================-->
+
+            <button
+                type="submit"
+                id="loginBtn"
+                class="login-btn">
+
+                <i class="fa-solid fa-right-to-bracket"></i>
+
+                <span>Sign In</span>
+
+            </button>
+
+        </form>
+
+        <!--=========================
+                Security Notice
+        ==========================-->
+
+        <div class="security-box">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>
+
+                Authorized Office Staff Only
+
+            </span>
+
+        </div>
+
+        <!--=========================
+                School Information
+        ==========================-->
+
+        <div class="school-info">
+
+            <h3>
+
+                ST. JOSEPH'S SCHOOL
+
+            </h3>
+
+            <p>
+
+                School ERP Management System
+
+            </p>
+
+        </div>
+
+        <!--=========================
+                Message Box
+        ==========================-->
+
+        <div
+            id="messageBox"
+            class="message-box">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span id="messageText">
+
+                Welcome to St. Joseph's School ERP
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--=========================
+        Loading Screen
+==========================-->
+
+<div
+    id="loadingScreen"
+    class="loading-screen">
+
+    <div class="loader"></div>
+
+    <h2>
+
+        Signing In...
+
+    </h2>
+
+    <p>
+
+        Please wait while your account is being verified.
+
+    </p>
+
+</div>
+
+<!--=========================
+            Footer
+==========================-->
+
+<footer>
+
+    <p>
+
+        © 2026 ST. JOSEPH'S SCHOOL
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<!--=========================
+        Login JavaScript
+==========================-->
+
+<script
+type="module"
+<script type="module" src="login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1010 @@
+/*==================================================
+    ST. JOSEPH'S SCHOOL
+    SCHOOL DOCUMENT GENERATOR
+    SIMPLE PREMIUM DASHBOARD
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:#f4f6f9;
+
+    color:#1e293b;
+
+    overflow:hidden;
+
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/*==================================================
+                    CONTAINER
+==================================================*/
+
+.container{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+}
+
+
+/*==================================================
+                    SIDEBAR
+==================================================*/
+
+.sidebar{
+
+    width:285px;
+    height:100vh;
+
+    background:#ffffff;
+
+    border-right:1px solid #e2e8f0;
+
+    padding:22px 16px;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow-y:auto;
+
+}
+
+
+/*==================================================
+                SCHOOL BRAND
+==================================================*/
+
+.school-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:5px 7px;
+
+}
+
+.school-brand img{
+
+    width:48px;
+    height:48px;
+
+    object-fit:contain;
+
+}
+
+.school-brand h2{
+
+    font-size:15px;
+
+    color:#172033;
+
+    font-weight:700;
+
+}
+
+.school-brand p{
+
+    margin-top:3px;
+
+    font-size:10px;
+
+    color:#7b8796;
+
+}
+
+
+/*==================================================
+                SIDEBAR LINE
+==================================================*/
+
+.sidebar-line{
+
+    height:1px;
+
+    background:#e8edf2;
+
+    margin:20px 0;
+
+}
+
+
+/*==================================================
+                NAV TITLE
+==================================================*/
+
+.nav-title{
+
+    padding:0 8px;
+
+    margin-bottom:10px;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:1.2px;
+
+    color:#9aa4b2;
+
+}
+
+
+/*==================================================
+                DOCUMENT SECTION
+==================================================*/
+
+.document-section{
+
+    margin-bottom:18px;
+
+}
+
+
+/*==================================================
+                SECTION TITLE
+==================================================*/
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:7px 9px;
+
+    margin-bottom:5px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:#526071;
+
+}
+
+.section-title i{
+
+    font-size:12px;
+
+    color:#2563eb;
+
+}
+
+
+/*==================================================
+                DOCUMENT ITEM
+==================================================*/
+
+.document-item{
+
+    min-height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:9px;
+
+    border-radius:10px;
+
+    border:1px solid transparent;
+
+    transition:.2s ease;
+
+}
+
+.document-item:hover{
+
+    background:#f7f9fc;
+
+    border-color:#e4eaf1;
+
+}
+
+
+/*==================================================
+                DOCUMENT ICON
+==================================================*/
+
+.document-icon{
+
+    width:36px;
+    height:36px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    font-size:14px;
+
+}
+
+.document-icon.blue{
+
+    background:#edf4ff;
+
+    color:#2563eb;
+
+}
+
+.document-icon.warning{
+
+    background:#fff5e7;
+
+    color:#c47700;
+
+}
+
+
+/*==================================================
+                DOCUMENT TEXT
+==================================================*/
+
+.document-text{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.document-text strong{
+
+    display:block;
+
+    font-size:11px;
+
+    font-weight:650;
+
+    color:#263448;
+
+}
+
+.document-text small{
+
+    display:block;
+
+    margin-top:3px;
+
+    font-size:9px;
+
+    color:#8a95a5;
+
+}
+
+
+/*==================================================
+                    ARROW
+==================================================*/
+
+.arrow{
+
+    color:#b7c0cb;
+
+    font-size:9px;
+
+}
+
+.document-item:hover .arrow{
+
+    color:#2563eb;
+
+}
+
+
+/*==================================================
+                SIDEBAR FOOTER
+==================================================*/
+
+.sidebar-footer{
+
+    margin-top:auto;
+
+    padding-top:15px;
+
+    border-top:1px solid #e8edf2;
+
+}
+
+
+/*==================================================
+                SYSTEM STATUS
+==================================================*/
+
+.system-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:0 8px;
+
+    margin-bottom:10px;
+
+    color:#7c8796;
+
+    font-size:9px;
+
+    font-weight:600;
+
+}
+
+.system-status span{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#16a34a;
+
+    box-shadow:
+        0 0 0 3px rgba(22,163,74,.10);
+
+}
+
+
+/*==================================================
+                BACK BUTTON
+==================================================*/
+
+.back-dashboard{
+
+    height:38px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+    border-radius:8px;
+
+    background:#f5f7fa;
+
+    border:1px solid #e2e8f0;
+
+    color:#596678;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    transition:.2s ease;
+
+}
+
+.back-dashboard:hover{
+
+    background:#172033;
+
+    color:#ffffff;
+
+    border-color:#172033;
+
+}
+
+
+/*==================================================
+                    MAIN PANEL
+==================================================*/
+
+.main-panel{
+
+    flex:1;
+
+    min-width:0;
+
+    height:100vh;
+
+    overflow-y:auto;
+
+    background:#f4f6f9;
+
+}
+
+
+/*==================================================
+                    TOP BAR
+==================================================*/
+
+.topbar{
+
+    height:70px;
+
+    padding:0 32px;
+
+    background:#ffffff;
+
+    border-bottom:1px solid #e2e8f0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.breadcrumb{
+
+    display:block;
+
+    margin-bottom:4px;
+
+    font-size:9px;
+
+    color:#9aa4b2;
+
+}
+
+.topbar h1{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#172033;
+
+}
+
+
+/*==================================================
+                    TOP LOGO
+==================================================*/
+
+.top-logo{
+
+    width:38px;
+    height:38px;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:9px;
+
+    background:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+}
+
+.top-logo img{
+
+    width:30px;
+    height:30px;
+
+    object-fit:contain;
+
+}
+
+
+/*==================================================
+                WELCOME CARD
+==================================================*/
+
+.welcome-card{
+
+    margin:28px 32px 24px;
+
+    min-height:180px;
+
+    padding:30px 34px;
+
+    border-radius:16px;
+
+    border:1px solid #dfe6ee;
+
+    background:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    box-shadow:
+        0 7px 25px rgba(15,23,42,.04);
+
+}
+
+
+/*==================================================
+                WELCOME LABEL
+==================================================*/
+
+.welcome-label{
+
+    display:inline-block;
+
+    padding:5px 9px;
+
+    border-radius:15px;
+
+    background:#edf4ff;
+
+    color:#2563eb;
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+}
+
+
+/*==================================================
+                WELCOME TITLE
+==================================================*/
+
+.welcome-card h2{
+
+    margin-top:12px;
+
+    font-size:27px;
+
+    color:#172033;
+
+    font-weight:750;
+
+    letter-spacing:-.6px;
+
+}
+
+.welcome-card p{
+
+    margin-top:7px;
+
+    font-size:11px;
+
+    color:#7b8796;
+
+}
+
+
+/*==================================================
+                DOCUMENT COUNT
+==================================================*/
+
+.document-count{
+
+    width:105px;
+    height:105px;
+
+    border-radius:14px;
+
+    background:#f7f9fc;
+
+    border:1px solid #e1e7ee;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+}
+
+.document-count strong{
+
+    font-size:30px;
+
+    color:#2563eb;
+
+}
+
+.document-count span{
+
+    font-size:8px;
+
+    line-height:1.4;
+
+    color:#7b8796;
+
+}
+
+
+/*==================================================
+                DOCUMENTS AREA
+==================================================*/
+
+.documents{
+
+    margin:0 32px;
+
+}
+
+
+/*==================================================
+                SECTION HEADING
+==================================================*/
+
+.section-heading{
+
+    margin-bottom:14px;
+
+}
+
+.section-heading h2{
+
+    font-size:18px;
+
+    color:#172033;
+
+    font-weight:700;
+
+}
+
+.section-heading span{
+
+    display:block;
+
+    margin-top:4px;
+
+    font-size:10px;
+
+    color:#8a95a5;
+
+}
+
+
+/*==================================================
+                DOCUMENT GRID
+==================================================*/
+
+.document-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:16px;
+
+    max-width:850px;
+
+}
+
+
+/*==================================================
+                DOCUMENT CARD
+==================================================*/
+
+.document-card{
+
+    min-height:190px;
+
+    padding:22px;
+
+    background:#ffffff;
+
+    border:1px solid #e0e6ed;
+
+    border-radius:14px;
+
+    position:relative;
+
+    transition:.25s ease;
+
+    box-shadow:
+        0 5px 18px rgba(15,23,42,.035);
+
+}
+
+.document-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#cdd8e6;
+
+    box-shadow:
+        0 12px 28px rgba(15,23,42,.08);
+
+}
+
+
+/*==================================================
+                CARD ICON
+==================================================*/
+
+.card-icon{
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:11px;
+
+    font-size:18px;
+
+}
+
+.card-icon.blue{
+
+    background:#edf4ff;
+
+    color:#2563eb;
+
+}
+
+.card-icon.warning{
+
+    background:#fff5e7;
+
+    color:#c47700;
+
+}
+
+
+/*==================================================
+                CARD INFO
+==================================================*/
+
+.card-info{
+
+    margin-top:17px;
+
+    padding-right:30px;
+
+}
+
+.card-info span{
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    color:#9aa4b2;
+
+}
+
+.card-info h3{
+
+    margin-top:5px;
+
+    font-size:15px;
+
+    color:#263448;
+
+    font-weight:700;
+
+}
+
+.card-info p{
+
+    margin-top:7px;
+
+    max-width:320px;
+
+    font-size:10px;
+
+    line-height:1.5;
+
+    color:#8792a2;
+
+}
+
+
+/*==================================================
+                OPEN ICON
+==================================================*/
+
+.open-icon{
+
+    position:absolute;
+
+    right:18px;
+
+    bottom:18px;
+
+    width:30px;
+    height:30px;
+
+    border-radius:50%;
+
+    background:#f4f7fa;
+
+    color:#8793a4;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:9px;
+
+    transition:.2s ease;
+
+}
+
+.document-card:hover .open-icon{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+
+/*==================================================
+                    FOOTER
+==================================================*/
+
+footer{
+
+    margin:30px 32px 20px;
+
+    padding-top:14px;
+
+    border-top:1px solid #e1e6ec;
+
+    font-size:9px;
+
+    color:#9aa4b2;
+
+}
+
+
+/*==================================================
+                SCROLLBAR
+==================================================*/
+
+.main-panel::-webkit-scrollbar{
+
+    width:7px;
+
+}
+
+.main-panel::-webkit-scrollbar-track{
+
+    background:#f4f6f9;
+
+}
+
+.main-panel::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:20px;
+
+}
+
+.sidebar::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:#d1d9e3;
+
+    border-radius:20px;
+
+}
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:900px){
+
+    body{
+        overflow:auto;
+    }
+
+    .container{
+        height:auto;
+        min-height:100vh;
+    }
+
+    .sidebar{
+        width:240px;
+    }
+
+    .document-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .container{
+        display:block;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        max-height:none;
+
+        border-right:none;
+        border-bottom:1px solid #e2e8f0;
+    }
+
+    .main-panel{
+        height:auto;
+        overflow:visible;
+    }
+
+    .welcome-card{
+        margin:20px;
+    }
+
+    .documents{
+        margin:0 20px;
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .topbar{
+        padding:0 20px;
+    }
+
+    .welcome-card{
+        margin:20px;
+        padding:24px;
+    }
+
+    .document-count{
+        display:none;
+    }
+
+    .welcome-card h2{
+        font-size:23px;
+    }
+
+    .documents{
+        margin:0 20px;
+    }
+
+}

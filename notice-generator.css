@@ -1,0 +1,1006 @@
+/*==========================================
+    ST. JOSEPH'S SCHOOL ERP
+    NOTICE GENERATOR
+==========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#edf1f5;
+
+    padding:30px;
+
+    color:#222;
+
+}
+
+/*==========================================
+            MAIN CONTAINER
+==========================================*/
+
+.container{
+
+    max-width:1800px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:35px;
+
+    align-items:flex-start;
+
+}
+
+/*==========================================
+            LEFT PANEL
+==========================================*/
+
+.editor-panel{
+
+    background:#fff;
+
+    border-radius:14px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:20px;
+
+}
+
+/*==========================================
+            HEADER
+==========================================*/
+
+.panel-header{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.panel-header h2{
+
+    color:#0B3D91;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.panel-header h2 i{
+
+    margin-right:8px;
+
+}
+
+.panel-header p{
+
+    color:#666;
+
+    margin-top:8px;
+
+    font-size:14px;
+
+}
+
+/*==========================================
+            FORM
+==========================================*/
+
+.form-group{
+
+    margin-bottom:18px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border:1px solid #d7d7d7;
+
+    border-radius:8px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.form-group textarea{
+
+    resize:none;
+
+    min-height:220px;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#0B3D91;
+
+    box-shadow:0 0 8px rgba(11,61,145,.15);
+
+}
+
+/*==========================================
+            BUTTONS
+==========================================*/
+
+.button-box{
+
+    display:grid;
+
+    gap:12px;
+
+    margin-top:25px;
+
+}
+
+.button-box button{
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:14px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.button-box button i{
+
+    margin-right:8px;
+
+}
+
+#previewBtn{
+
+    background:#0B3D91;
+
+}
+
+#printBtn{
+
+    background:#1976D2;
+
+}
+
+#pdfBtn{
+
+    background:#D32F2F;
+
+}
+
+#whatsappBtn{
+
+    background:#25D366;
+
+}
+
+#resetBtn{
+
+    background:#616161;
+
+}
+
+.button-box button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.back-dashboard{
+
+    display:block;
+
+    margin-top:20px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:#f2f5fa;
+
+    color:#0B3D91;
+
+    padding:13px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+}
+
+/*==========================================
+            PREVIEW PANEL
+==========================================*/
+
+.preview-panel{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+/*==========================================
+            A4 PAGE
+==========================================*/
+
+.a4-page{
+
+    width:210mm;
+
+    min-height:297mm;
+
+    background:#fff;
+
+    padding:20mm;
+
+    position:relative;
+
+    border:1px solid #d6d6d6;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    overflow:hidden;
+
+}
+
+/*==========================================
+            SCHOOL HEADER
+==========================================*/
+
+.school-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.school-logo{
+
+    width:130px;
+
+    height:130px;
+
+    object-fit:contain;
+
+}
+
+.school-info{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.school-info h1{
+
+    font-size:34px;
+
+    color:#0B3D91;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+}
+
+.school-info h3{
+
+    margin-top:6px;
+
+    font-size:18px;
+
+    color:#222;
+
+}
+
+.school-info p{
+
+    margin-top:6px;
+
+    font-size:14px;
+
+    color:#555;
+
+}
+
+/*==========================================
+            HEADER LINE
+==========================================*/
+
+.header-line{
+
+    height:3px;
+
+    margin:20px 0;
+
+    background:#0B3D91;
+
+}
+
+/*==========================================
+            NOTICE TITLE
+==========================================*/
+
+.notice-title{
+
+    text-align:center;
+
+    font-size:30px;
+
+    color:#111;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    margin-bottom:25px;
+
+}/*==========================================
+            NOTICE INFO
+==========================================*/
+
+.notice-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #d9d9d9;
+
+}
+
+.notice-info div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.notice-info strong{
+
+    font-size:14px;
+
+    color:#0B3D91;
+
+    font-weight:700;
+
+}
+
+.notice-info span{
+
+    font-size:14px;
+
+    color:#333;
+
+    font-weight:500;
+
+}
+
+/*==========================================
+            WATERMARK
+==========================================*/
+
+.watermark{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.watermark img{
+
+    width:320px;
+
+    opacity:.05;
+
+    object-fit:contain;
+
+}
+
+/*==========================================
+            NOTICE BODY
+==========================================*/
+
+.notice-body{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:15px;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:#222;
+
+}
+
+.notice-body p{
+
+    margin-bottom:18px;
+
+}
+
+.notice-body strong{
+
+    color:#111;
+
+    font-weight:700;
+
+}
+
+/*==========================================
+            SUBJECT
+==========================================*/
+
+.subject{
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+#previewSubject{
+
+    font-weight:500;
+
+}
+
+/*==========================================
+        NOTICE CONTENT
+==========================================*/
+
+#previewContent{
+
+    min-height:430px;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+    text-align:justify;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+/*==========================================
+            THANK YOU
+==========================================*/
+
+.thank-you{
+
+    position:absolute;
+
+    right:20mm;
+
+    bottom:55mm;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+/*==========================================
+            FOOTER
+==========================================*/
+
+.notice-footer{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    gap:20px;
+
+    align-items:end;
+
+}
+
+/*==========================================
+            ISSUED BY
+==========================================*/
+
+.issued-by{
+
+    text-align:left;
+
+}
+
+.issued-by p{
+
+    font-size:13px;
+
+    color:#666;
+
+    margin-bottom:8px;
+
+}
+
+.issued-by h3{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/*==========================================
+            SCHOOL SEAL
+==========================================*/
+
+.seal-section{
+
+    text-align:center;
+
+}
+
+.seal-placeholder{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#777;
+
+    margin-bottom:6px;
+
+}
+
+.seal-section small{
+
+    color:#999;
+
+    font-size:12px;
+
+}
+
+/*==========================================
+            SIGNATURE
+==========================================*/
+
+.signature-section{
+
+    text-align:right;
+
+}
+
+.signature-line{
+
+    width:170px;
+
+    height:2px;
+
+    background:#000;
+
+    margin-left:auto;
+
+    margin-bottom:8px;
+
+}
+
+.signature-section h3{
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.signature-section small{
+
+    color:#999;
+
+    font-size:12px;
+
+}/*==========================================
+            ACTION BUTTONS
+==========================================*/
+
+.button-box button,
+.back-dashboard{
+
+    transition:.30s ease;
+
+}
+
+.button-box button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+.back-dashboard:hover{
+
+    background:#0B3D91;
+
+    color:#fff;
+
+}
+
+/*==========================================
+            SCROLLBAR
+==========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0B3D91;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#072f75;
+
+}
+
+/*==========================================
+            TEXT SELECTION
+==========================================*/
+
+::selection{
+
+    background:#0B3D91;
+
+    color:#fff;
+
+}
+
+/*==========================================
+            RESPONSIVE
+==========================================*/
+
+@media(max-width:1200px){
+
+.container{
+
+    grid-template-columns:1fr;
+
+}
+
+.editor-panel{
+
+    position:relative;
+
+    top:0;
+
+}
+
+.preview-panel{
+
+    overflow:auto;
+
+    justify-content:flex-start;
+
+}
+
+}
+
+@media(max-width:768px){
+
+body{
+
+    padding:15px;
+
+}
+
+.school-header{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.school-logo{
+
+    width:75px;
+
+    height:75px;
+
+}
+
+.school-info h1{
+
+    font-size:26px;
+
+}
+
+.school-info h3{
+
+    font-size:15px;
+
+}
+
+.notice-title{
+
+    font-size:24px;
+
+    letter-spacing:2px;
+
+}
+
+.notice-info{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+}
+
+.notice-footer{
+
+    position:absolute;
+
+    left:20mm;
+
+    right:20mm;
+
+    bottom:15mm;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    align-items:end;
+
+;
+
+}
+
+.issued-by,
+.seal-section,
+.signature-section{
+
+    text-align:center;
+
+}
+
+.signature-line{
+
+    margin:auto;
+
+}
+
+.button-box{
+
+    gap:10px;
+
+}
+
+}
+
+/*==========================================
+            PRINT
+==========================================*/
+
+@media print{
+
+body{
+
+    background:#fff;
+
+    padding:0;
+
+}
+
+.editor-panel{
+
+    display:none !important;
+
+}
+
+.preview-panel{
+
+    width:100%;
+
+}
+
+.a4-page{
+
+    width:210mm;
+
+    height:297mm;
+
+    padding:15mm;
+
+    margin:0 auto;
+
+    box-sizing:border-box;
+
+    overflow:hidden;
+
+    background:#fff;
+
+}
+
+.header-line{
+
+    background:#000;
+
+}
+
+.watermark img{
+
+    opacity:.04;
+
+}
+
+}
+
+/*==========================================
+            A4 PAGE FIX
+==========================================*/
+
+@page{
+
+    size:A4;
+
+    margin:0;
+
+}
+
+@media print{
+
+html,
+body{
+
+    width:210mm;
+
+    height:297mm;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.editor-panel{
+
+    display:none !important;
+
+}
+
+.container{
+
+    display:block;
+
+}
+
+.preview-panel{
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.a4-page{
+
+    width:210mm;
+
+    height:297mm;
+
+    margin:0;
+
+    padding:15mm;
+
+    border:none;
+
+    box-shadow:none;
+
+    overflow:hidden;
+
+    page-break-after:avoid;
+
+    page-break-inside:avoid;
+
+}
+
+}
+/*==========================================
+            END
+==========================================*/

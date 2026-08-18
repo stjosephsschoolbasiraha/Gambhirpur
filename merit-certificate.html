@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Merit Certificate Generator | St. Joseph's School ERP
+
+</title>
+
+<link rel="icon"
+href="images/school.png">
+
+<!--====================================
+            GOOGLE FONTS
+=====================================-->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<!--====================================
+          FONT AWESOME
+=====================================-->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<!--====================================
+              CSS
+=====================================-->
+
+<link rel="stylesheet"
+href="merit-certificate.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!--====================================
+            LEFT PANEL
+=====================================-->
+
+<div class="editor-panel">
+
+<div class="panel-header">
+
+<div class="panel-icon">
+
+<i class="fa-solid fa-medal"></i>
+
+</div>
+
+<h2>
+
+Merit Certificate
+
+</h2>
+
+<p>
+
+St. Joseph's School ERP
+
+</p>
+
+</div>
+
+<form id="certificateForm">
+
+<!--====================================
+      CERTIFICATE NUMBER
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Certificate No.
+
+</label>
+
+<input
+type="text"
+id="certificateNo"
+placeholder="MER-2026-001">
+
+</div>
+
+<!--====================================
+          ISSUE DATE
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Issue Date
+
+</label>
+
+<input
+type="date"
+id="issueDate">
+
+</div>
+
+<!--====================================
+        STUDENT NAME
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Student Name
+
+</label>
+
+<input
+type="text"
+id="studentName"
+placeholder="Enter Student Name">
+
+</div>
+
+<!--====================================
+            CLASS
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Class
+
+</label>
+
+<select id="studentClass">
+
+<option value="">Select Class</option>
+
+<option>Nursery</option>
+<option>LKG</option>
+<option>UKG</option>
+<option>I</option>
+<option>II</option>
+<option>III</option>
+<option>IV</option>
+<option>V</option>
+<option>VI</option>
+<option>VII</option>
+<option>VIII</option>
+<option>IX</option>
+<option>X</option>
+<option>XI</option>
+<option>XII</option>
+
+</select>
+
+</div>
+
+<!--====================================
+            SECTION
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Section
+
+</label>
+
+<select id="section">
+
+<option>A</option>
+<option>B</option>
+<option>C</option>
+<option>D</option>
+
+</select>
+
+</div>
+
+<!--====================================
+      ACADEMIC SESSION
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Academic Session
+
+</label>
+
+<input
+type="text"
+id="academicSession"
+placeholder="2026-2027">
+
+</div>
+
+<!--====================================
+      EXAMINATION
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Examination
+
+</label>
+
+<select id="examination">
+
+<option>Annual Examination</option>
+
+<option>Half Yearly Examination</option>
+
+<option>Periodic Test - I</option>
+
+<option>Periodic Test - II</option>
+
+<option>Unit Test - I</option>
+
+<option>Unit Test - II</option>
+
+<option>CBSE Board Examination</option>
+
+</select>
+
+</div><!--====================================
+        PERCENTAGE
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Percentage (%)
+
+</label>
+
+<input
+type="number"
+id="percentage"
+placeholder="95">
+
+</div>
+
+<!--====================================
+            GRADE
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Grade
+
+</label>
+
+<select id="grade">
+
+<option>A1</option>
+
+<option>A2</option>
+
+<option>B1</option>
+
+<option>B2</option>
+
+<option>C1</option>
+
+<option>C2</option>
+
+<option>D</option>
+
+</select>
+
+</div>
+
+<!--====================================
+            POSITION
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Position
+
+</label>
+
+<select id="position">
+
+<option>First Position</option>
+
+<option>Second Position</option>
+
+<option>Third Position</option>
+
+<option>Class Topper</option>
+
+<option>School Topper</option>
+
+<option>Distinction</option>
+
+</select>
+
+</div>
+
+<!--====================================
+        CERTIFICATE MESSAGE
+=====================================-->
+
+<div class="form-group">
+
+<label>
+
+Merit Message
+
+</label>
+
+<textarea
+id="message"
+rows="5">This is to proudly certify that the above named student has demonstrated outstanding academic excellence, remarkable dedication and exceptional performance in the Annual Examination. The Management of ST. JOSEPH'S SCHOOL appreciates the student's sincere efforts and wishes continued success in all future endeavors.</textarea>
+
+</div>
+
+<!--====================================
+            BUTTONS
+=====================================-->
+
+<div class="button-group">
+
+<button
+type="button"
+class="btn btn-primary"
+id="previewBtn">
+
+<i class="fa-solid fa-eye"></i>
+
+Live Preview
+
+</button>
+
+<button
+type="button"
+class="btn btn-success"
+id="printBtn">
+
+<i class="fa-solid fa-print"></i>
+
+Print Certificate
+
+</button>
+
+<button
+type="button"
+class="btn btn-whatsapp"
+id="whatsappBtn">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Share on WhatsApp
+
+</button>
+
+<button
+type="reset"
+class="btn btn-reset">
+
+<i class="fa-solid fa-rotate-left"></i>
+
+Reset Form
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<!--====================================
+        RIGHT PREVIEW PANEL
+=====================================-->
+
+<div class="preview-panel">
+
+<div
+class="certificate-page"
+id="certificate">
+
+<div class="outer-border"></div>
+
+<div class="inner-border"></div>
+
+<!--====================================
+            WATERMARK
+=====================================-->
+
+<div class="watermark">
+
+<img
+src="images/school.png"
+alt="School Watermark">
+
+</div><!--====================================
+        SCHOOL HEADER
+=====================================-->
+
+<header class="certificate-header">
+
+<div class="header-row">
+
+<img
+src="images/school.png"
+class="school-logo"
+alt="School Logo">
+
+<div class="school-details">
+
+<h1>
+
+ST. JOSEPH'S SCHOOL
+
+</h1>
+
+<h3>
+
+Basiraha, Gambhirpur, Azamgarh (U.P.)
+
+</h3>
+
+<p>
+
+CBSE AFFILIATED SCHOOL
+
+</p>
+
+</div>
+
+</div>
+
+</header>
+
+<!--====================================
+      CERTIFICATE META
+=====================================-->
+
+<div class="certificate-meta">
+
+<div>
+
+<strong>
+
+Certificate No.
+
+</strong>
+
+<span id="previewCertificateNo">
+
+MER-2026-001
+
+</span>
+
+</div>
+
+<div>
+
+<strong>
+
+Issue Date
+
+</strong>
+
+<span id="previewIssueDate">
+
+30 July 2026
+
+</span>
+
+</div>
+
+</div>
+
+<div class="top-divider">
+
+<span></span>
+
+</div>
+
+<!--====================================
+            TITLE
+=====================================-->
+
+<section class="title-section">
+
+<h2>
+
+Certificate of Merit
+
+</h2>
+
+<h3>
+
+Academic Excellence Award
+
+</h3>
+
+<div class="title-line"></div>
+
+</section>
+
+<!--====================================
+        CERTIFICATE BODY
+=====================================-->
+
+<section class="certificate-body">
+
+<p class="presented-text">
+
+This Certificate is Proudly Presented To
+
+</p>
+
+<h1 id="previewStudentName">
+
+Student Name
+
+</h1>
+
+<p class="student-tagline">
+
+for achieving outstanding academic excellence and exceptional performance in the examination.
+
+</p>
+
+<!--====================================
+        MERIT DETAILS
+=====================================-->
+
+<p class="merit-info">
+
+This is to certify that
+
+<strong id="previewStudentName2">
+
+Student Name
+
+</strong>
+
+of
+
+<strong>
+
+Class
+
+<span id="previewStudentClass">
+
+X
+
+</span>
+
+-
+
+<span id="previewSection">
+
+A
+
+</span>
+
+</strong>
+
+has successfully secured
+
+<strong>
+
+<span id="previewPercentage">
+
+95
+
+</span>%
+
+</strong>
+
+marks with
+
+<strong id="previewGrade">
+
+A1
+
+</strong>
+
+Grade in the
+
+<strong id="previewExamination">
+
+Annual Examination
+
+</strong>
+
+during the Academic Session
+
+<strong id="previewAcademicSession">
+
+2026-2027
+
+</strong>
+
+and achieved
+
+<strong id="previewPosition">
+
+First Position
+
+</strong>.
+
+</p>
+
+<!--====================================
+        MERIT SUMMARY
+=====================================-->
+
+<div class="experience-box">
+
+<div class="experience-title">
+
+ACADEMIC ACHIEVEMENT
+
+</div>
+
+<p id="previewMessage">
+
+This is to proudly certify that the above named student has demonstrated outstanding academic excellence, remarkable dedication and exceptional performance. The Management of <strong>ST. JOSEPH'S SCHOOL</strong> congratulates the student on this remarkable achievement and wishes continued success .
+</p>
+
+</div>
+<!--====================================
+        FOOTER
+=====================================-->
+
+<footer class="certificate-footer">
+
+<div class="seal-area">
+
+<small>
+
+School Stamp
+
+</small>
+
+</div>
+
+<div class="principal-box">
+
+<div class="signature-line"></div>
+
+<h4>
+
+Principal
+
+</h4>
+
+<small>
+
+ST. JOSEPH'S SCHOOL
+
+</small>
+
+</div>
+
+</footer>
+
+<!--====================================
+        DISCLAIMER
+=====================================-->
+
+<div class="certificate-disclaimer">
+
+This certificate is valid only with the official school stamp and the Principal's signature.
+
+</div>
+
+</section>
+
+</div>
+
+</div>
+
+</div>
+
+<!--====================================
+        LIBRARIES
+=====================================-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!--====================================
+        JAVASCRIPT
+=====================================-->
+
+<script src="merit-certificate.js"></script>
+
+</body>
+
+</html>

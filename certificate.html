@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SJS Certificate Generator</title>
+
+    <link rel="stylesheet"
+          href="certificate.css">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+        Sidebar
+========================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <img src="images/school.png"
+             alt="School Logo">
+
+        <h2>SJS ERP</h2>
+
+    </div>
+
+    <ul>
+
+        <li>
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+        </li>
+
+        <li class="active">
+
+            <a href="#">
+
+                <i class="fa-solid fa-award"></i>
+
+                Certificate Generator
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="notice.html">
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                Notice Generator
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="marksheet.html">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Marksheet Generator
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                School Settings
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="login.html"
+               id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- =========================
+        Main Content
+========================= -->
+
+<div class="main-content">
+
+<!-- =========================
+        Top Bar
+========================= -->
+
+<div class="topbar">
+
+    <div>
+
+        <h1>
+
+            Certificate Generator
+
+        </h1>
+
+        <p>
+
+            Create and Print Official School Certificates
+
+        </p>
+
+    </div>
+
+    <div class="profile">
+
+        <img src="images/school.png"
+             alt="Profile">
+
+    </div>
+
+</div>
+
+<!-- =========================
+      Student Details Form
+========================= -->
+
+<div class="form-container">
+
+    <h2>
+
+        Student Information
+
+    </h2>
+
+    <form id="certificateForm">
+
+        <div class="form-grid">
+
+            <div class="input-box">
+
+                <label>
+
+                    Student Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter Student Name"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>
+
+                    Admission No.
+
+                </label>
+
+                <input
+                    type="text"
+                    id="admissionNo"
+                    placeholder="Admission Number">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>
+
+                    Father's Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="fatherName"
+                    placeholder="Father's Name">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>
+
+                    Mother's Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="motherName"
+                    placeholder="Mother's Name">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>
+
+                    Class
+
+                </label>
+
+                <input
+                    type="text"
+                    id="studentClass"
+                    placeholder="Class">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>
+
+                    Section
+
+                </label>
+
+                <input
+                    type="text"
+                    id="section"
+                    placeholder="Section">
+
+            </div>            <div class="input-box">
+
+                <label>
+
+                    Roll Number
+
+                </label>
+
+                <input
+                    type="text"
+                    id="rollNo"
+                    placeholder="Roll Number">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>
+
+                    Certificate Type
+
+                </label>
+
+                <select id="certificateType" required>
+
+                    <option value="">
+                        Select Certificate
+                    </option>
+
+                    <option>
+                        Academic Excellence Certificate
+                    </option>
+
+                    <option>
+                        Class Topper Certificate
+                    </option>
+
+                    <option>
+                        Subject Topper Certificate
+                    </option>
+
+                    <option>
+                        Participation Certificate
+                    </option>
+
+                    <option>
+                        Sports Certificate
+                    </option>
+
+                    <option>
+                        Cultural Certificate
+                    </option>
+
+                    <option>
+                        Character Certificate
+                    </option>
+
+                    <option>
+                        Bonafide Certificate
+                    </option>
+
+                    <option>
+                        Transfer Certificate
+                    </option>
+
+                    <option>
+                        School Leaving Certificate
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>
+
+                    Certificate Number
+
+                </label>
+
+                <input
+                    type="text"
+                    id="certificateNo"
+                    readonly>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>
+
+                    Issue Date
+
+                </label>
+
+                <input
+                    type="date"
+                    id="issueDate">
+
+            </div>
+
+        </div>
+
+        <div class="input-box">
+
+            <label>
+
+                Remarks
+
+            </label>
+
+            <textarea
+                id="remarks"
+                rows="5"
+                placeholder="Write remarks or purpose..."></textarea>
+
+        </div>
+
+        <div class="button-group">
+
+            <button
+                type="button"
+                id="previewBtn">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Preview
+
+            </button>
+
+            <button
+                type="button"
+                id="printBtn">
+
+                <i class="fa-solid fa-print"></i>
+
+                Print
+
+            </button>
+
+            <button
+                type="button"
+                id="pdfBtn">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Download PDF
+
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+<!-- =========================
+      Certificate Preview
+========================= -->
+
+<div class="preview-container">
+
+    <h2>
+
+        Certificate Preview
+
+    </h2>
+
+    <div id="certificatePreview">
+
+        <img
+            src="images/school.png"
+            class="preview-logo"
+            alt="School Logo">
+
+        <h1>
+
+            ST. JOSEPH'S SCHOOL
+
+        </h1>
+
+        <p>
+
+            Basiraha, Gambhirpur, Azamgarh (U.P.)
+
+        </p>
+
+        <hr>
+
+        <h2 id="previewCertificateType">
+
+            CERTIFICATE
+
+        </h2>
+
+        <p class="preview-text">
+
+            Certificate preview will appear here after clicking
+            <strong>Preview</strong>.
+
+        </p>
+
+    </div>
+
+</div><!-- =========================
+      Certificate Footer
+========================= -->
+
+<div class="certificate-footer">
+
+    <div class="signature-box">
+
+        <img
+            src="images/principal-sign.png"
+            alt="Principal Signature"
+            id="principalSignature">
+
+        <hr>
+
+        <h4>Principal</h4>
+
+    </div>
+
+    <div class="seal-box">
+
+        <img
+            src="images/school-seal.png"
+            alt="School Seal"
+            id="schoolSeal">
+
+        <p>
+
+            Official School Seal
+
+        </p>
+
+    </div>
+
+    <div class="signature-box">
+
+        <img
+            src="images/manager-sign.png"
+            alt="Manager Signature"
+            id="managerSignature">
+
+        <hr>
+
+        <h4>Manager</h4>
+
+    </div>
+
+</div>
+
+<!-- =========================
+      ERP Footer
+========================= -->
+
+<footer class="erp-footer">
+
+    <p>
+
+        © 2026 St. Joseph's School ERP |
+        Certificate Generator |
+        All Rights Reserved
+
+    </p>
+
+</footer>
+
+</div>
+
+<!-- =========================
+      External Libraries
+========================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- =========================
+      Certificate JavaScript
+========================= -->
+
+<script type="module"
+        src="certificate.js"></script>
+
+</body>
+
+</html>

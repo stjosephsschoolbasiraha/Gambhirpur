@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Transfer Certificate Generator</title>
+
+<link rel="stylesheet" href="transfer-certificate.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<!-- ===================================================
+LEFT EDITOR PANEL
+=================================================== -->
+
+<div class="editor-panel">
+
+<div class="panel-title">
+
+<h2>Transfer Certificate</h2>
+
+<span>Certificate Generator</span>
+
+</div>
+
+<div class="form-group">
+
+<label>TC Serial No.</label>
+
+<input
+type="text"
+id="tcNo"
+placeholder="SJS-TC-001">
+
+</div>
+
+<div class="form-group">
+
+<label>Session</label>
+
+<input
+type="text"
+id="session"
+placeholder="2026-2027">
+
+</div>
+
+<div class="form-group">
+
+<label>Student Name</label>
+
+<input
+type="text"
+id="studentName"
+placeholder="Student Name">
+
+</div>
+
+<div class="form-group">
+
+<label>Father's Name</label>
+
+<input
+type="text"
+id="fatherName"
+placeholder="Father Name">
+
+</div>
+
+<div class="form-group">
+
+<label>Mother's Name</label>
+
+<input
+type="text"
+id="motherName"
+placeholder="Mother Name">
+
+</div>
+
+<div class="form-group">
+
+<label>Residential Address</label>
+
+<textarea
+id="address"
+rows="4"
+placeholder="Complete Address"></textarea>
+
+</div>
+
+<div class="form-group">
+
+<label>Date of Admission</label>
+
+<input
+type="date"
+id="admissionDate">
+
+</div>
+
+<div class="form-group">
+
+<label>Transfer From</label>
+
+<input
+type="date"
+id="transferDate">
+
+</div>
+
+<div class="form-group">
+
+<label>Date of Leaving</label>
+
+<input
+type="date"
+id="leavingDate">
+
+</div><div class="form-group">
+
+<label>Character</label>
+
+<select id="character">
+
+<option value="">Select Character</option>
+
+<option>Excellent</option>
+
+<option>Very Good</option>
+
+<option>Good</option>
+
+<option>Satisfactory</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Class</label>
+
+<select id="studentClass">
+
+<option value="">Select Class</option>
+
+<option>Nursery</option>
+<option>LKG</option>
+<option>UKG</option>
+
+<option>I</option>
+<option>II</option>
+<option>III</option>
+<option>IV</option>
+<option>V</option>
+
+<option>VI</option>
+<option>VII</option>
+<option>VIII</option>
+
+<option>IX</option>
+<option>X</option>
+
+<option>XI</option>
+<option>XII</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Stream</label>
+
+<input
+type="text"
+id="stream"
+placeholder="Science / Commerce / Arts">
+
+</div>
+
+<div class="form-group">
+
+<label>School Year From</label>
+
+<input
+type="date"
+id="yearFrom">
+
+</div>
+
+<div class="form-group">
+
+<label>School Year To</label>
+
+<input
+type="date"
+id="yearTo">
+
+</div>
+
+<div class="form-group">
+
+<label>Date of Birth</label>
+
+<input
+type="date"
+id="dob">
+
+</div>
+
+<div class="form-group">
+
+<label>Date of Birth (In Words)</label>
+
+<input
+type="text"
+id="dobWords"
+placeholder="First August Two Thousand Ten">
+
+</div>
+
+<div class="form-group">
+
+<label>Promotion</label>
+
+<select id="promotion">
+
+<option value="">Select</option>
+
+<option>Granted</option>
+
+<option>Not Granted</option>
+
+</select>
+
+</div>
+
+<div class="button-group">
+
+<button
+type="button"
+class="btn btn-print"
+onclick="printCertificate()">
+
+Print Certificate
+
+</button>
+
+<button
+type="reset"
+class="btn btn-reset">
+
+Reset
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ===================================================
+RIGHT SIDE CERTIFICATE
+=================================================== -->
+
+<div class="preview-panel">
+
+<div class="certificate-page">
+
+<div class="outer-border"></div>
+
+<div class="inner-border"></div>
+
+<div class="watermark">
+
+<img src="images/school.png" alt="School Logo">
+
+</div>
+
+<div class="certificate-header">
+
+<img
+src="images/school.png"
+class="school-logo"
+alt="Logo">
+
+<div class="school-details">
+
+<h1>ST. JOSEPH'S SCHOOL</h1>
+
+<h3>Basiraha, Gambhirpur, Azamgarh (U.P.)</h3>
+
+<span>CBSE AFFILIATED SENIOR SECONDARY SCHOOL</span>
+
+</div>
+
+</div>
+
+<div class="certificate-meta">
+
+<div>
+
+<strong>TC Serial No. :</strong>
+
+<span id="previewTcNo">__________</span>
+
+</div>
+
+<div>
+
+<strong>Session :</strong>
+
+<span id="previewSession">__________</span>
+
+</div>
+
+</div>
+
+<div class="certificate-title">
+
+TRANSFER CERTIFICATE
+
+</div>
+
+<div class="certificate-body">This is to certify that
+<span class="fill" id="previewStudentName">__________________</span>
+Son / Daughter of Mr.
+<span class="fill" id="previewFatherName">__________________</span>
+and Mrs.
+<span class="fill" id="previewMotherName">__________________</span>
+resident of
+<span class="fill" id="previewAddress">________________________________________</span>.
+<br><br>
+Was admitted into this school on
+<span class="fill" id="previewAdmissionDate">____________</span>
+on transfer from
+<span class="fill" id="previewTransferDate">____________</span>.
+
+
+
+He / She left <strong>ST. JOSEPH'S SCHOOL</strong> on
+<span class="fill" id="previewLeavingDate">____________</span>
+with
+<span class="fill" id="previewCharacter">____________</span>
+character.
+
+<br>
+
+He / She was then studying in
+<span class="fill" id="previewClass">____________</span>,
+Class of
+<span class="fill" id="previewStream">____________</span>.
+
+<br><br>
+
+The school year being from
+<span class="fill" id="previewYearFrom">____________</span>
+to
+<span class="fill" id="previewYearTo">____________</span>.
+
+<br><br>
+
+All sums due to this school on his / her account have been remitted or satisfactorily arranged for.
+
+<br>
+
+His / Her Date of Birth according to the Admission Register is :
+
+<br>
+
+<b>In Figures :</b>
+<span class="fill" id="previewDOB">__________________</span>
+
+<br>
+
+<b>In Words :</b>
+<span class="fill" id="previewDOBWords">
+____________________________________________________
+</span>
+
+<br><br>
+
+Promotion has been
+<span class="fill" id="previewPromotion">____________</span>.
+
+</div>
+
+<!-- =======================
+FOOTER
+======================= -->
+
+<div class="certificate-footer">
+
+    <div class="footer-box">
+
+        <div class="footer-line"></div>
+
+        <div class="footer-title">DATE</div>
+
+        <div id="previewIssueDate">30 July 2026</div>
+
+    </div>
+
+    <div class="footer-box">
+
+        <div class="footer-line"></div>
+
+        <div class="footer-title">SCHOOL SEAL</div>
+
+    </div>
+
+    <div class="footer-box">
+
+        <div class="footer-line"></div>
+
+        <div class="footer-title">PRINCIPAL</div>
+
+    </div>
+
+</div>
+
+<div class="certificate-disclaimer">
+
+This Transfer Certificate is valid only with the original signature of the Principal and the official school seal.
+
+</div>
+
+
+</div><!-- ===================================================
+END OF CERTIFICATE PAGE
+=================================================== -->
+
+</div>
+
+<!-- END : certificate-page -->
+
+</div>
+
+<!-- END : preview-panel -->
+
+</div>
+
+<!-- END : container -->
+
+<script src="transfer-certificate.js"></script>
+
+</body>
+
+</html>

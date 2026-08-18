@@ -1,0 +1,1124 @@
+/*====================================================
+        ST. JOSEPH'S SCHOOL ERP
+ACADEMIC EXCELLENCE CERTIFICATE v3.0
+====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#eef3f9;
+
+    color:#222;
+
+    padding:30px;
+
+}
+
+/*=========================================
+            MAIN CONTAINER
+=========================================*/
+
+.container{
+
+    max-width:1850px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:35px;
+
+    align-items:flex-start;
+
+}
+
+/*=========================================
+            LEFT PANEL
+=========================================*/
+
+.editor-panel{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    position:sticky;
+
+    top:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/*=========================================
+            HEADER
+=========================================*/
+
+.panel-header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.panel-icon{
+
+    font-size:48px;
+
+    color:#D4AF37;
+
+    margin-bottom:12px;
+
+}
+
+.panel-header h2{
+
+    font-size:28px;
+
+    color:#0B3D91;
+
+    font-weight:700;
+
+}
+
+.panel-header p{
+
+    margin-top:8px;
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+/*=========================================
+            FORM
+=========================================*/
+
+.form-group{
+
+    margin-bottom:18px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border:1px solid #d6d6d6;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.30s;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:130px;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#0B3D91;
+
+    box-shadow:0 0 10px rgba(11,61,145,.15);
+
+}
+
+.form-group input[readonly]{
+
+    background:#f6f8fb;
+
+    font-weight:700;
+
+    color:#0B3D91;
+
+}
+
+/*=========================================
+            BUTTONS
+=========================================*/
+
+.button-group{
+
+    display:grid;
+
+    gap:12px;
+
+    margin-top:25px;
+
+}
+
+.btn{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:14px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.btn i{
+
+    margin-right:8px;
+
+}
+
+.btn-primary{
+
+    background:#0B3D91;
+
+}
+
+.btn-success{
+
+    background:#1B8F3A;
+
+}
+
+.btn-danger{
+
+    background:#D32F2F;
+
+}
+
+.btn-whatsapp{
+
+    background:#25D366;
+
+}
+
+.btn-reset{
+
+    background:#666;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 18px rgba(0,0,0,.15);
+
+}
+
+/*=========================================
+            PREVIEW PANEL
+=========================================*/
+
+.preview-panel{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+}
+
+/*=========================================
+            CERTIFICATE PAGE
+=========================================*/
+
+.certificate-page{
+
+    width:210mm;
+
+    min-height:297mm;
+
+    background:#fffdf8;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:20mm;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}/*=========================================
+        PREMIUM DOUBLE BORDER
+=========================================*/
+
+.outer-border{
+
+    position:absolute;
+
+    top:12mm;
+
+    left:12mm;
+
+    right:12mm;
+
+    bottom:12mm;
+
+    border:3px solid #0B3D91;
+
+    pointer-events:none;
+
+}
+
+.inner-border{
+
+    position:absolute;
+
+    top:17mm;
+
+    left:17mm;
+
+    right:17mm;
+
+    bottom:17mm;
+
+    border:1.8px solid #D4AF37;
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+        GOLD CORNER ORNAMENTS
+=========================================*/
+
+.outer-border::before,
+.outer-border::after,
+.inner-border::before,
+.inner-border::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:55px;
+
+    height:55px;
+
+}
+
+.outer-border::before{
+
+    top:-3px;
+
+    left:-3px;
+
+    border-top:5px solid #D4AF37;
+
+    border-left:5px solid #D4AF37;
+
+}
+
+.outer-border::after{
+
+    top:-3px;
+
+    right:-3px;
+
+    border-top:5px solid #D4AF37;
+
+    border-right:5px solid #D4AF37;
+
+}
+
+.inner-border::before{
+
+    bottom:-2px;
+
+    left:-2px;
+
+    border-bottom:4px solid #D4AF37;
+
+    border-left:4px solid #D4AF37;
+
+}
+
+.inner-border::after{
+
+    bottom:-2px;
+
+    right:-2px;
+
+    border-bottom:4px solid #D4AF37;
+
+    border-right:4px solid #D4AF37;
+
+}
+
+/*=========================================
+        CERTIFICATE HEADER
+=========================================*/
+
+.certificate-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.school-logo{
+
+    width:105px;
+
+    height:105px;
+
+    object-fit:contain;
+
+}
+
+.school-details{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.school-details h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:34px;
+
+    color:#0B3D91;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+.school-details h3{
+
+    margin-top:8px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.school-details p{
+
+    margin-top:5px;
+
+    font-size:13px;
+
+    color:#666;
+
+    letter-spacing:1px;
+
+}
+
+/*=========================================
+        CERTIFICATE META
+=========================================*/
+
+.certificate-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:18px;
+
+    font-size:12px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.certificate-meta strong{
+
+    color:#0B3D91;
+
+    margin-right:6px;
+
+}
+
+.certificate-meta span{
+
+    font-weight:600;
+
+}
+
+/*=========================================
+        DECORATIVE DIVIDER
+=========================================*/
+
+.top-divider{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:18px 0 28px;
+
+}
+
+.top-divider span{
+
+    width:320px;
+
+    height:3px;
+
+    background:linear-gradient(
+    to right,
+    transparent,
+    #D4AF37,
+    #0B3D91,
+    #D4AF37,
+    transparent);
+
+}
+
+/*=========================================
+        PREMIUM TITLE
+=========================================*/
+
+.title-section{
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.title-section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#B58A1D;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    text-shadow:1px 1px 0 rgba(0,0,0,.08);
+
+}
+
+.title-section h3{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    letter-spacing:10px;
+
+    color:#0B3D91;
+
+    margin-top:8px;
+
+    text-transform:uppercase;
+
+}
+
+.title-line{
+
+    width:260px;
+
+    height:2px;
+
+    margin:18px auto 35px;
+
+    background:linear-gradient(
+    to right,
+    transparent,
+    #D4AF37,
+    #0B3D91,
+    #D4AF37,
+    transparent);
+
+}
+
+/*=========================================
+        WATERMARK
+=========================================*/
+
+.watermark{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+.watermark img{
+
+    width:360px;
+
+    opacity:.035;
+
+}
+
+/*=========================================
+        CERTIFICATE BODY
+=========================================*/
+
+.certificate-body{
+
+    position:relative;
+
+    z-index:5;
+
+    text-align:center;
+
+}
+
+.presented-text{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:28px;
+
+    font-style:italic;
+
+    color:#555;
+
+    margin-bottom:15px;
+
+}
+
+/*=========================================
+        STUDENT NAME
+=========================================*/
+
+#previewStudentName{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:54px;
+
+    font-weight:700;
+
+    color:#0B3D91;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+#previewStudentName::after{
+
+    content:"";
+
+    display:block;
+
+    width:320px;
+
+    height:2px;
+
+    margin:14px auto 0;
+
+    background:#D4AF37;
+
+}
+
+.student-tagline{
+
+    width:85%;
+
+    margin:0 auto;
+
+    font-size:17px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}/*=========================================
+        STUDENT INFORMATION
+=========================================*/
+
+.student-details{
+
+    width:88%;
+
+    margin:22px auto;
+
+    gap:8px;
+
+}
+
+.detail-row{
+
+    font-size:15px;
+
+}
+
+.detail-row{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    font-size:16px;
+
+}
+
+.label{
+
+    width:170px;
+
+    font-weight:700;
+
+    color:#0B3D91;
+
+}
+
+.value{
+
+    flex:1;
+
+    color:#222;
+
+    border-bottom:1px dotted #999;
+
+    padding-bottom:3px;
+
+}
+
+/*=========================================
+        ACHIEVEMENT BOX
+=========================================*/
+
+.achievement-box{
+
+    width:88%;
+
+    margin:28px auto 0;
+
+    padding:18px 24px;
+
+    border:1px solid #D4AF37;
+
+    background:#fffdf7;
+
+}
+
+.achievement-box h3{
+
+    font-size:18px;
+
+    margin-bottom:12px;
+
+}
+
+.achievement-box p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    text-align:justify;
+
+}
+
+/*=========================================
+        FOOTER
+=========================================*/
+
+.certificate-footer{
+
+    position:absolute;
+
+    left:28mm;
+
+    right:28mm;
+
+    bottom:24mm;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    align-items:end;
+
+    column-gap:40px;
+
+}
+
+.signature-line{
+
+    width:150px;
+
+    margin:0 auto 8px;
+
+    border-top:1.5px solid #222;
+
+}
+
+.teacher-box,
+.principal-box{
+
+    text-align:center;
+
+}
+
+.teacher-box h4,
+.principal-box h4{
+
+    font-size:13px;
+
+    margin-bottom:3px;
+
+}
+
+.teacher-box small,
+.principal-box small{
+
+    font-size:11px;
+
+    color:#777;
+
+    font-style:italic;
+
+}
+
+/*=========================================
+        SCHOOL STAMP
+=========================================*/
+
+.seal-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    min-height:85px;
+
+}
+
+.seal-area small{
+
+    font-size:11px;
+
+    color:#999;
+
+    font-style:italic;
+
+    letter-spacing:1px;
+
+}
+
+/*=========================================
+        DISCLAIMER
+=========================================*/
+
+.certificate-disclaimer{
+
+    position:absolute;
+
+    left:18mm;
+
+    right:18mm;
+
+    bottom:7mm;
+
+    text-align:center;
+
+    font-size:8px;
+
+    color:#9b9b9b;
+
+    line-height:1.3;
+
+    border-top:.5px solid #d9d9d9;
+
+    padding-top:4px;
+
+    font-style:italic;
+
+}
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px){
+
+.container{
+
+    grid-template-columns:1fr;
+
+}
+
+.editor-panel{
+
+    position:relative;
+
+    top:0;
+
+}
+
+.preview-panel{
+
+    overflow:auto;
+
+    justify-content:flex-start;
+
+}
+
+}
+
+@media(max-width:768px){
+
+body{
+
+    padding:15px;
+
+}
+
+.certificate-page{
+
+    transform:scale(.72);
+
+    transform-origin:top left;
+
+}
+
+.certificate-header{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.school-logo{
+
+    width:80px;
+
+    height:80px;
+
+}
+
+.school-details h1{
+
+    font-size:24px;
+
+}
+
+.school-details h3{
+
+    font-size:15px;
+
+}
+
+.title-section h2{
+
+    font-size:28px;
+
+}
+
+.title-section h3{
+
+    font-size:16px;
+
+    letter-spacing:4px;
+
+}
+
+.student-details{
+
+    width:95%;
+
+}
+
+.achievement-box{
+
+    width:95%;
+
+    padding:18px;
+
+}
+
+.certificate-footer{
+
+    position:static;
+
+    margin-top:60px;
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+}
+
+}
+
+/*=========================================
+        PRINT SETTINGS
+=========================================*/
+
+@page{
+
+    size:A4;
+
+    margin:0;
+
+}
+
+@media print{
+
+body{
+
+    background:#fff;
+
+    padding:0;
+
+}
+
+.editor-panel{
+
+    display:none !important;
+
+}
+
+.container{
+
+    display:block;
+
+}
+
+.preview-panel{
+
+    display:block;
+
+}
+
+.certificate-page{
+
+    width:210mm;
+
+    height:297mm;
+
+    margin:0;
+
+    padding:20mm;
+
+    box-shadow:none;
+
+}
+
+}
+
+/*=========================================
+        SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0B3D91;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+/*=========================================
+        TEXT SELECTION
+=========================================*/
+
+::selection{
+
+    background:#0B3D91;
+
+    color:#fff;
+
+}

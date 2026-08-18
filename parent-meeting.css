@@ -1,0 +1,1421 @@
+/*==================================================
+    ST. JOSEPH'S SCHOOL
+    PARENT MEETING NOTICE GENERATOR
+    PREMIUM CSS - PART 1
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/*==================================================
+                    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#edf2f7;
+    color:#1e293b;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:'Poppins',sans-serif;
+}
+
+
+/*==================================================
+                    MAIN CONTAINER
+==================================================*/
+
+.container{
+
+    width:100%;
+    height:100vh;
+
+    display:grid;
+    grid-template-columns:400px 1fr;
+
+}
+
+
+/*==================================================
+                    EDITOR PANEL
+==================================================*/
+
+.editor-panel{
+
+    width:400px;
+    height:100vh;
+
+    background:#ffffff;
+
+    border-right:1px solid #dbe3ec;
+
+    padding:25px;
+
+    overflow-y:auto;
+
+    box-shadow:
+        8px 0 30px rgba(15,23,42,.06);
+
+    position:relative;
+    z-index:50;
+
+}
+
+
+/*==================================================
+                EDITOR SCROLLBAR
+==================================================*/
+
+.editor-panel::-webkit-scrollbar{
+    width:7px;
+}
+
+.editor-panel::-webkit-scrollbar-track{
+    background:#f1f5f9;
+}
+
+.editor-panel::-webkit-scrollbar-thumb{
+    background:#0B3D91;
+    border-radius:20px;
+}
+
+
+/*==================================================
+                    PANEL HEADER
+==================================================*/
+
+.panel-header{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding-bottom:22px;
+    margin-bottom:22px;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.panel-icon{
+
+    width:50px;
+    height:50px;
+
+    border-radius:14px;
+
+    background:#0B3D91;
+    color:#ffffff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:21px;
+
+    box-shadow:
+        0 8px 20px rgba(11,61,145,.20);
+
+}
+
+.panel-header h2{
+
+    font-size:20px;
+    font-weight:700;
+
+    color:#0f172a;
+
+}
+
+.panel-header p{
+
+    margin-top:3px;
+
+    font-size:12px;
+
+    color:#64748b;
+
+}
+
+
+/*==================================================
+                    EDITOR CARD
+==================================================*/
+
+.editor-card{
+
+    background:#fbfcfe;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    margin-bottom:18px;
+
+    box-shadow:
+        0 4px 15px rgba(15,23,42,.025);
+
+}
+
+
+/*==================================================
+                    CARD TITLE
+==================================================*/
+
+.card-title{
+
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    padding-bottom:13px;
+    margin-bottom:16px;
+
+    border-bottom:1px solid #e8edf3;
+
+}
+
+.card-title i{
+
+    color:#0B3D91;
+    font-size:15px;
+
+}
+
+.card-title h3{
+
+    font-size:15px;
+
+    color:#1e293b;
+
+    font-weight:600;
+
+}
+
+
+/*==================================================
+                    FORM ROW
+==================================================*/
+
+.form-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+}
+
+
+/*==================================================
+                    FORM GROUP
+==================================================*/
+
+.form-group{
+
+    margin-bottom:15px;
+
+}
+
+.form-group:last-child{
+
+    margin-bottom:0;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#475569;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+
+/*==================================================
+                INPUTS / SELECT / TEXTAREA
+==================================================*/
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    border:1px solid #d5dee9;
+
+    border-radius:9px;
+
+    background:#ffffff;
+
+    color:#1e293b;
+
+    padding:10px 12px;
+
+    outline:none;
+
+    font-size:13px;
+
+    transition:.25s ease;
+
+}
+
+
+/*==================================================
+                    TEXTAREA
+==================================================*/
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:90px;
+
+    line-height:1.5;
+
+}
+
+
+/*==================================================
+                    INPUT FOCUS
+==================================================*/
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#0B3D91;
+
+    box-shadow:
+        0 0 0 3px rgba(11,61,145,.08);
+
+}
+
+
+/*==================================================
+                    BUTTON GROUP
+==================================================*/
+
+.button-group{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    margin-top:5px;
+
+}
+
+
+/*==================================================
+                    BUTTON
+==================================================*/
+
+.btn{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:11px 10px;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    transition:.25s ease;
+
+}
+
+
+/*==================================================
+                    PREVIEW
+==================================================*/
+
+.btn-preview{
+
+    background:#0B3D91;
+
+    color:#ffffff;
+
+}
+
+
+/*==================================================
+                    PRINT
+==================================================*/
+
+.btn-print{
+
+    background:#15803d;
+
+    color:#ffffff;
+
+}
+
+
+/*==================================================
+                    WHATSAPP
+==================================================*/
+
+.btn-whatsapp{
+
+    background:#128c7e;
+
+    color:#ffffff;
+
+}
+
+
+/*==================================================
+                    RESET
+==================================================*/
+
+.btn-reset{
+
+    background:#64748b;
+
+    color:#ffffff;
+
+}
+
+
+/*==================================================
+                    BUTTON HOVER
+==================================================*/
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(0,0,0,.12);
+
+}
+
+
+/*==================================================
+                BACK DASHBOARD
+==================================================*/
+
+.back-dashboard{
+
+    margin-top:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:11px;
+
+    border-radius:10px;
+
+    background:#f1f5f9;
+
+    color:#475569;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.back-dashboard:hover{
+
+    background:#e2e8f0;
+
+    color:#0B3D91;
+
+}
+
+
+/*==================================================
+                PREVIEW PANEL
+==================================================*/
+
+.preview-panel{
+
+    height:100vh;
+
+    overflow:auto;
+
+    padding:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    background:#edf2f7;
+
+}
+
+
+/*==================================================
+                PREVIEW SCROLLBAR
+==================================================*/
+
+.preview-panel::-webkit-scrollbar{
+    width:9px;
+}
+
+.preview-panel::-webkit-scrollbar-track{
+    background:#edf2f7;
+}
+
+.preview-panel::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:20px;
+}
+
+
+/*==================================================
+                    A4 PAGE
+==================================================*/
+
+.a4-page{
+
+    width:210mm;
+    min-width:210mm;
+
+    height:297mm;
+    min-height:297mm;
+
+    background:#ffffff;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:18mm;
+
+    box-shadow:
+        0 15px 45px rgba(15,23,42,.16);
+
+}
+
+
+/*==================================================
+                    BORDERS
+==================================================*/
+
+.outer-border{
+
+    position:absolute;
+
+    inset:8mm;
+
+    border:2.5px solid #0B3D91;
+
+    pointer-events:none;
+
+    z-index:5;
+
+}
+
+.inner-border{
+
+    position:absolute;
+
+    inset:12mm;
+
+    border:1.3px solid #D4AF37;
+
+    pointer-events:none;
+
+    z-index:6;
+
+}
+
+
+/*==================================================
+                    WATERMARK
+==================================================*/
+
+.watermark{
+
+    position:absolute;
+
+    left:50%;
+    top:52%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.watermark img{
+
+    width:250px;
+
+    opacity:.035;
+
+    filter:grayscale(100%);
+
+}
+
+
+/*==================================================
+                SCHOOL HEADER
+==================================================*/
+
+.school-header{
+
+    position:relative;
+
+    z-index:10;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding-bottom:14px;
+
+    border-bottom:1px solid #d4af37;
+
+}
+
+
+/*==================================================
+                    SCHOOL LOGO
+==================================================*/
+
+.school-logo{
+
+    width:78px;
+    height:78px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+}
+
+
+/*==================================================
+                    SCHOOL INFO
+==================================================*/
+
+.school-info{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.school-info h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:29px;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    color:#0B3D91;
+
+}
+
+.school-info h3{
+
+    margin-top:5px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#1f2937;
+
+}
+
+.school-info p{
+
+    margin-top:4px;
+
+    font-size:10px;
+
+    letter-spacing:1.4px;
+
+    text-transform:uppercase;
+
+    color:#64748b;
+
+}
+
+
+/*==================================================
+                    NOTICE META
+==================================================*/
+
+.notice-meta{
+
+    position:relative;
+
+    z-index:10;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:15px;
+
+    font-size:11px;
+
+}
+
+.notice-meta strong{
+
+    color:#0B3D91;
+
+}
+
+.notice-meta span{
+
+    color:#222;
+
+    font-weight:600;
+
+}
+
+
+/*==================================================
+                    NOTICE TITLE
+==================================================*/
+
+.notice-title{
+
+    position:relative;
+
+    z-index:10;
+
+    margin:22px 0 15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+}
+
+.notice-title > div{
+
+    text-align:center;
+
+}
+
+.notice-title h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:#0B3D91;
+
+    white-space:nowrap;
+
+}
+
+.notice-title h3{
+
+    margin-top:4px;
+
+    font-family:'Noto Sans Devanagari',sans-serif;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#475569;
+
+}
+
+.title-line{
+
+    width:55px;
+
+    height:1.5px;
+
+    background:#D4AF37;
+
+}
+
+
+/*==================================================
+                    MEETING BADGE
+==================================================*/
+
+.meeting-badge{
+
+    position:relative;
+
+    z-index:10;
+
+    width:max-content;
+
+    margin:0 auto 14px;
+
+    padding:6px 16px;
+
+    border-radius:20px;
+
+    background:#edf4ff;
+
+    border:1px solid #d5e3fa;
+
+    color:#0B3D91;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+
+/*==================================================
+                NOTICE SECTIONS
+==================================================*/
+
+.notice-section{
+
+    position:relative;
+
+    z-index:10;
+
+    margin:0 3mm 10px;
+
+    font-size:15px;
+
+    line-height:1.45;
+
+    color:#273244;
+
+}
+
+.notice-section p{
+
+    margin-bottom:7px;
+
+    text-align:justify;
+
+}
+
+
+/*==================================================
+                LANGUAGE HEADING
+==================================================*/
+
+.language-heading{
+
+    margin-bottom:7px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    color:#0B3D91;
+
+}
+
+.language-heading::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:#dce4ee;
+
+}
+
+.language-heading span{
+
+    white-space:nowrap;
+
+}
+
+
+/*==================================================
+                    HINDI SECTION
+==================================================*/
+
+.hindi-section{
+
+    font-family:'Noto Sans Devanagari',sans-serif;
+
+    font-size:13.5px;
+
+    line-height:1.65;
+
+    padding-bottom:4px;
+
+    border-bottom:1px solid #e7ebf0;
+
+}
+
+
+/*==================================================
+                DETAILS HEADING
+==================================================*/
+
+.details-heading{
+
+    position:relative;
+
+    z-index:10;
+
+    margin:12px 3mm 7px;
+
+    padding-bottom:5px;
+
+    border-bottom:1px solid #d9e0e8;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    color:#0B3D91;
+
+    letter-spacing:.8px;
+
+}
+
+.details-heading span{
+
+    margin-left:8px;
+
+    color:#64748b;
+
+    font-family:'Noto Sans Devanagari',sans-serif;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:0;
+
+}
+
+
+/*==================================================
+                MEETING TABLE
+==================================================*/
+
+.meeting-table{
+
+    width:calc(100% - 6mm);
+
+    margin:0 3mm;
+
+    border-collapse:collapse;
+
+    position:relative;
+
+    z-index:10;
+
+    font-size:11px;
+
+}
+
+.meeting-table td{
+
+    border:1px solid #dce3eb;
+
+    padding:7px 10px;
+
+    vertical-align:middle;
+
+}
+
+.meeting-table td:first-child{
+
+    width:35%;
+
+    background:#f7f9fc;
+
+    color:#334155;
+
+}
+
+.meeting-table td:last-child{
+
+    color:#1e293b;
+
+    font-weight:600;
+
+}
+
+.meeting-table strong{
+
+    display:inline-block;
+
+    font-size:10px;
+
+}
+
+.meeting-table small{
+
+    display:block;
+
+    margin-top:2px;
+
+    font-family:'Noto Sans Devanagari',sans-serif;
+
+    color:#7b8796;
+
+    font-size:9px;
+
+}
+
+
+/*==================================================
+                    AGENDA
+==================================================*/
+
+.agenda-section{
+
+    position:relative;
+
+    z-index:10;
+
+    margin:11px 3mm 0;
+
+    padding:10px 12px;
+
+    background:#f8fafc;
+
+    border-left:3px solid #0B3D91;
+
+}
+
+.dual-heading{
+
+    display:flex;
+
+    align-items:baseline;
+
+    gap:8px;
+
+    margin-bottom:5px;
+
+}
+
+.dual-heading strong{
+
+    color:#0B3D91;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.4px;
+
+}
+
+.dual-heading span{
+
+    color:#64748b;
+
+    font-family:'Noto Sans Devanagari',sans-serif;
+
+    font-size:10px;
+
+}
+
+.agenda-section p{
+
+    font-family:'Noto Sans Devanagari','Poppins',sans-serif;
+
+    font-size:12px;
+
+    line-height:1.55;
+
+    white-space:pre-line;
+
+    color:#334155;
+
+}
+
+
+/*==================================================
+                INSTRUCTIONS
+==================================================*/
+
+.instructions-section{
+
+    position:relative;
+
+    z-index:10;
+
+    margin:10px 3mm 0;
+
+    padding:10px 12px;
+
+    background:#fffdf5;
+
+    border-left:3px solid #D4AF37;
+
+}
+
+.instruction-content{
+
+    font-size:11px;
+
+    line-height:1.55;
+
+    color:#475569;
+
+}
+
+.instruction-content p{
+
+    margin-bottom:4px;
+
+}
+
+.instruction-content p:last-child{
+
+    margin-bottom:0;
+
+}
+
+.instruction-content p:nth-child(even){
+
+    font-family:'Noto Sans Devanagari',sans-serif;
+
+}
+
+
+/*==================================================
+                    REMARKS
+==================================================*/
+
+.remarks-box{
+
+    position:relative;
+
+    z-index:10;
+
+    margin:10px 3mm 0;
+
+    padding:8px 11px;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    font-size:10px;
+
+    line-height:1.45;
+
+    color:#475569;
+
+}
+
+.remarks-box strong{
+
+    color:#0B3D91;
+
+}
+
+
+/*==================================================
+                CLOSING TEXT
+==================================================*/
+
+.closing-text{
+
+    position:relative;
+
+    z-index:10;
+
+    margin:12px 3mm 0;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+.closing-text p{
+
+    margin-bottom:3px;
+
+}
+
+.hindi-closing{
+
+    font-family:'Noto Sans Devanagari',sans-serif;
+
+    font-size:11px;
+
+    color:#64748b;
+
+}
+
+
+/*==================================================
+                    FOOTER
+==================================================*/
+
+.notice-footer{
+
+    position:absolute;
+
+    left:18mm;
+
+    right:18mm;
+
+    bottom:25mm;
+
+    z-index:20;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:70px;
+
+}
+
+.footer-left,
+.footer-right{
+
+    width:150px;
+
+    text-align:center;
+
+}
+
+.signature-line{
+
+    width:115px;
+
+    margin:0 auto 6px;
+
+    border-top:1.3px solid #222;
+
+}
+
+.notice-footer strong{
+
+    display:block;
+
+    font-size:10px;
+
+    color:#1e293b;
+
+}
+
+.notice-footer small{
+
+    display:block;
+
+    margin-top:3px;
+
+    font-family:'Noto Sans Devanagari',sans-serif;
+
+    font-size:8px;
+
+    color:#7b8796;
+
+}
+
+
+/*==================================================
+                FOOTER NOTE
+==================================================*/
+
+.footer-note{
+
+    position:absolute;
+
+    left:18mm;
+
+    right:18mm;
+
+    bottom:10mm;
+
+    z-index:20;
+
+    padding-top:5px;
+
+    border-top:1px solid #d9dfe7;
+
+    text-align:center;
+
+    font-size:7.5px;
+
+    color:#8792a2;
+
+}
+
+
+/*==================================================
+                    RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+    .container{
+
+        grid-template-columns:360px 1fr;
+
+    }
+
+    .editor-panel{
+
+        width:360px;
+
+    }
+
+}
+
+@media(max-width:800px){
+
+    body{
+
+        overflow:auto;
+
+    }
+
+    .container{
+
+        height:auto;
+
+        display:block;
+
+    }
+
+    .editor-panel{
+
+        width:100%;
+
+        height:auto;
+
+        max-height:none;
+
+        border-right:none;
+
+        border-bottom:1px solid #dbe3ec;
+
+    }
+
+    .preview-panel{
+
+        height:auto;
+
+        min-height:100vh;
+
+        padding:25px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .form-row{
+
+        grid-template-columns:1fr;
+
+        gap:0;
+
+    }
+
+    .button-group{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}

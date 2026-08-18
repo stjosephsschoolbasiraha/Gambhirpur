@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Student Warning Letter | St. Joseph's School</title>
+
+<link rel="stylesheet"
+href="student-warning-letter.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!--==================================================
+                    LEFT EDITOR
+==================================================-->
+
+<aside class="editor-panel">
+
+    <div class="panel-header">
+
+        <div class="panel-icon">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+        </div>
+
+        <div>
+
+            <h2>Warning Letter</h2>
+
+            <p>Student Discipline Generator</p>
+
+        </div>
+
+    </div>
+
+
+    <!--==================================================
+                    LETTER DETAILS
+    ==================================================-->
+
+    <div class="editor-card">
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <h3>Letter Details</h3>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Warning Letter No.</label>
+
+            <input
+            type="text"
+            id="warningNo"
+            value="SJS-WL-001"
+            placeholder="SJS-WL-001">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Issue Date</label>
+
+            <input
+            type="date"
+            id="issueDate">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Academic Session</label>
+
+            <input
+            type="text"
+            id="session"
+            value="2026-2027"
+            placeholder="2026-2027">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Warning Level</label>
+
+            <select id="warningLevel">
+
+                <option>First Warning</option>
+
+                <option>Second Warning</option>
+
+                <option>Final Warning</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!--==================================================
+                    STUDENT DETAILS
+    ==================================================-->
+
+    <div class="editor-card">
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <h3>Student Information</h3>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Student Name</label>
+
+            <input
+            type="text"
+            id="studentName"
+            placeholder="Student Name">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Admission No.</label>
+
+            <input
+            type="text"
+            id="admissionNo"
+            placeholder="Admission Number">
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Class</label>
+
+                <select id="studentClass">
+
+                    <option value="">Select Class</option>
+
+                    <option>Nursery</option>
+                    <option>LKG</option>
+                    <option>UKG</option>
+
+                    <option>I</option>
+                    <option>II</option>
+                    <option>III</option>
+                    <option>IV</option>
+                    <option>V</option>
+                    <option>VI</option>
+                    <option>VII</option>
+                    <option>VIII</option>
+                    <option>IX</option>
+                    <option>X</option>
+                    <option>XI</option>
+                    <option>XII</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Section</label>
+
+                <input
+                type="text"
+                id="section"
+                placeholder="A">
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Parent / Guardian Name</label>
+
+            <input
+            type="text"
+            id="parentName"
+            placeholder="Parent / Guardian Name">
+
+        </div>
+
+    </div>
+
+
+    <!--==================================================
+                    INCIDENT DETAILS
+    ==================================================-->
+
+    <div class="editor-card">
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-circle-exclamation"></i>
+
+            <h3>Incident Details</h3>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Incident Date</label>
+
+            <input
+            type="date"
+            id="incidentDate">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Reason / Violation</label>
+
+            <select id="reason">
+
+                <option value="">
+                    Select Reason
+                </option>
+
+                <option>
+                    Misbehavior / Indiscipline
+                </option>
+
+                <option>
+                    Fighting or Physical Altercation
+                </option>
+
+                <option>
+                    Disrespectful Behaviour
+                </option>
+
+                <option>
+                    Repeated Classroom Disturbance
+                </option>
+
+                <option>
+                    Irregular Attendance
+                </option>
+
+                <option>
+                    Uniform / Grooming Violation
+                </option>
+
+                <option>
+                    Damage to School Property
+                </option>
+
+                <option>
+                    Bullying / Harassment
+                </option>
+
+                <option>
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Incident Description</label>
+
+            <textarea
+            id="incidentDescription"
+            rows="5"
+            placeholder="Describe the incident clearly and factually..."></textarea>
+
+        </div>
+
+    </div>
+
+
+    <!--==================================================
+                    IMPROVEMENT
+    ==================================================-->
+
+    <div class="editor-card">
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-arrow-trend-up"></i>
+
+            <h3>Required Improvement</h3>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <textarea
+            id="improvement"
+            rows="5"
+            placeholder="Mention the expected improvement and conduct..."></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Office Remarks</label>
+
+            <textarea
+            id="remarks"
+            rows="3"
+            placeholder="Optional remarks..."></textarea>
+
+        </div>
+
+    </div>
+
+
+    <!--==================================================
+                    ACTION BUTTONS
+    ==================================================-->
+
+    <div class="button-group">
+
+        <button
+        type="button"
+        class="btn btn-preview"
+        id="previewBtn">
+
+            <i class="fa-solid fa-eye"></i>
+
+            Preview
+
+        </button>
+
+
+        <button
+        type="button"
+        class="btn btn-print"
+        id="printBtn">
+
+            <i class="fa-solid fa-print"></i>
+
+            Print
+
+        </button>
+
+
+        <button
+        type="button"
+        class="btn btn-whatsapp"
+        id="whatsappBtn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WhatsApp
+
+        </button>
+
+
+        <button
+        type="button"
+        class="btn btn-reset"
+        id="resetBtn">
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            Reset
+
+        </button>
+
+    </div>
+
+
+    <!--==================================================
+                    BACK
+    ==================================================-->
+
+    <a
+    href="dashboard.html"
+    class="back-dashboard">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back to Dashboard
+
+    </a>
+
+</aside>
+
+
+
+<!--==================================================
+                    RIGHT PREVIEW
+==================================================-->
+
+<main class="preview-panel">
+
+
+    <div
+    class="a4-page"
+    id="warningLetter">
+
+
+        <!-- Decorative Borders -->
+
+        <div class="outer-border"></div>
+
+        <div class="inner-border"></div>
+
+
+        <!-- Watermark -->
+
+        <div class="watermark">
+
+            <img
+            src="images/school.png"
+            alt="School Watermark">
+
+        </div>
+
+
+        <!--==================================================
+                        SCHOOL HEADER
+        ==================================================-->
+
+        <header class="school-header">
+
+            <img
+            src="images/school.png"
+            class="school-logo"
+            alt="School Logo">
+
+
+            <div class="school-info">
+
+                <h1>
+                    ST. JOSEPH'S SCHOOL
+                </h1>
+
+                <h3>
+                    Basiraha, Gambhirpur,
+                    Azamgarh (U.P.)
+                </h3>
+
+                <p>
+                    CBSE Affiliated Senior Secondary School
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!--==================================================
+                        META
+        ==================================================-->
+
+        <div class="letter-meta">
+
+            <div>
+
+                <strong>Warning No.:</strong>
+
+                <span id="previewWarningNo">
+                    SJS-WL-001
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>Date:</strong>
+
+                <span id="previewIssueDate">
+                    DD Month YYYY
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!--==================================================
+                        TITLE
+        ==================================================-->
+
+        <div class="letter-title">
+
+            <span></span>
+
+            <h2>
+                STUDENT WARNING LETTER
+            </h2>
+
+            <span></span>
+
+        </div>
+
+
+        <!--==================================================
+                        WARNING BADGE
+        ==================================================-->
+
+        <div class="warning-badge">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <strong id="previewWarningLevel">
+                FIRST WARNING
+            </strong>
+
+        </div>
+
+
+        <!--==================================================
+                        LETTER BODY
+        ==================================================-->
+
+        <div class="letter-body">
+
+
+            <p>
+
+                To,
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Mr./Ms.
+                </strong>
+
+                <span
+                class="fill"
+                id="previewStudentName">
+
+                    ______________________
+
+                </span>
+
+            </p>
+
+
+            <p>
+
+                Parent / Guardian:
+
+                <span
+                class="fill"
+                id="previewParentName">
+
+                    ______________________
+
+                </span>
+
+            </p>
+
+
+            <p>
+
+                Class:
+
+                <span
+                class="fill"
+                id="previewClass">
+
+                    ______
+
+                </span>
+
+                &nbsp;&nbsp;
+
+                Section:
+
+                <span
+                class="fill"
+                id="previewSection">
+
+                    ______
+
+                </span>
+
+                &nbsp;&nbsp;
+
+                Admission No.:
+
+                <span
+                class="fill"
+                id="previewAdmissionNo">
+
+                    __________
+
+                </span>
+
+            </p>
+
+
+            <p class="subject-line">
+
+                <strong>
+                    Subject: Formal Warning Regarding Student Conduct
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                This letter is issued regarding an incident
+                reported on
+
+                <span
+                class="fill"
+                id="previewIncidentDate">
+
+                    __________________
+
+                </span>
+
+                concerning
+
+                <span
+                class="fill"
+                id="previewReason">
+
+                    __________________
+
+                </span>.
+
+            </p>
+
+
+            <div class="incident-box">
+
+                <h3>
+                    Incident Description
+                </h3>
+
+                <p id="previewDescription">
+
+                    The details of the incident will
+                    appear here.
+
+                </p>
+
+            </div>
+
+
+            <p>
+
+                The school expects every student to maintain
+                appropriate conduct, respect school rules,
+                and contribute to a safe and positive
+                learning environment.
+
+            </p>
+
+
+            <div class="improvement-box">
+
+                <h3>
+                    Required Improvement
+                </h3>
+
+                <p id="previewImprovement">
+
+                    The required improvement will
+                    appear here.
+
+                </p>
+
+            </div>
+
+
+            <p>
+
+                You are therefore advised to treat this
+                warning seriously and ensure that such
+                conduct is not repeated. Any further
+                violation may lead to appropriate action
+                according to school rules and policies.
+
+            </p>
+
+
+            <div class="remarks-box">
+
+                <strong>
+                    Office Remarks:
+                </strong>
+
+                <span id="previewRemarks">
+
+                    No additional remarks.
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!--==================================================
+                        FOOTER
+        ==================================================-->
+
+        <footer class="letter-footer">
+
+
+            <div class="signature-box">
+
+                <div class="signature-line"></div>
+
+                <strong>
+                    Class Teacher
+                </strong>
+
+            </div>
+
+
+            <div class="signature-box">
+
+                <div class="signature-line"></div>
+
+                <strong>
+                    Parent / Guardian
+                </strong>
+
+            </div>
+
+
+            <div class="signature-box">
+
+                <div class="signature-line"></div>
+
+                <strong>
+                    PRINCIPAL
+                </strong>
+
+            </div>
+
+
+        </footer>
+
+
+        <!-- Disclaimer -->
+
+        <div class="footer-note">
+
+            This warning letter is issued for official
+            school records and student discipline purposes.
+
+        </div>
+
+
+    </div>
+
+</main>
+
+</div>
+
+
+<!--==================================================
+                    SCRIPTS
+==================================================-->
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+</script>
+
+<script src="student-warning-letter.js"></script>
+
+</body>
+
+</html>
